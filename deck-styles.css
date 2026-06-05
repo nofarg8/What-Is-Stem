@@ -1,0 +1,246 @@
+/* ===== למה לי STEM עכשיו — ממטק / נופר גרגרוד ===== */
+/* גופן Assistant מקומי (offline) — קובץ variable אחד לכל subset מכסה משקלים 300–800 */
+@font-face{
+  font-family:'Assistant';
+  font-style:normal;
+  font-weight:300 800;
+  font-display:swap;
+  src:url('assets/fonts/assistant-hebrew.woff2') format('woff2');
+  unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F;
+}
+@font-face{
+  font-family:'Assistant';
+  font-style:normal;
+  font-weight:300 800;
+  font-display:swap;
+  src:url('assets/fonts/assistant-latin-ext.woff2') format('woff2');
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face{
+  font-family:'Assistant';
+  font-style:normal;
+  font-weight:300 800;
+  font-display:swap;
+  src:url('assets/fonts/assistant-latin.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+:root{
+  /* brand — sampled from the ממטק logo */
+  --green:#4FAE63;   /* מתמטיקה */
+  --orange:#F2920F;  /* טכנולוגיה */
+  --indigo:#5B53E0;  /* מדע · מותג ראשי */
+  --coral:#F2807E;   /* משחוק/קוגניציה */
+
+  --green-d:#3C8C4E;
+  --orange-d:#D77B05;
+  --indigo-d:#463CC2;
+  --coral-d:#E0605E;
+
+  /* pastel tints */
+  --t-green:#E9F5EC;
+  --t-orange:#FDF1DE;
+  --t-indigo:#ECEAFC;
+  --t-coral:#FCEBEA;
+
+  --ink:#2B2740;
+  --ink-soft:#615C7A;
+  --ink-faint:#9E99B3;
+  --cream:#FBF9F4;
+  --paper:#FFFFFF;
+  --line:#E7E3F0;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+deck-stage:not(:defined){visibility:hidden}
+
+deck-stage section{
+  font-family:'Assistant',sans-serif;
+  direction:rtl;
+  text-align:right;
+  background:var(--cream);
+  color:var(--ink);
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- shared structural ---------- */
+.pad{position:absolute;inset:0;padding:96px 110px;display:flex;flex-direction:column}
+.center{align-items:center;justify-content:center;text-align:center}
+
+h1,h2,h3{font-weight:800;line-height:1.04;letter-spacing:-0.5px;text-wrap:balance}
+.kicker{font-weight:700;font-size:26px;letter-spacing:2px;color:var(--indigo);text-transform:uppercase}
+.eng{font-family:'Assistant',sans-serif;direction:ltr;unicode-bidi:isolate;display:inline-block}
+
+p{line-height:1.45;text-wrap:pretty}
+
+/* ---------- footer brand mark ---------- */
+.foot{position:absolute;bottom:40px;left:110px;display:flex;align-items:center;gap:12px;z-index:5}
+.foot .mk{width:42px;height:38px;flex:none}
+.foot .lbl{font-size:24px;font-weight:600;color:var(--ink-soft);letter-spacing:.2px}
+.foot.on-dark .lbl{color:rgba(255,255,255,.82)}
+.pagenum{position:absolute;bottom:40px;right:110px;font-size:24px;font-weight:600;color:var(--ink-faint);z-index:5;direction:ltr}
+.on-dark ~ .pagenum,.pagenum.on-dark{color:rgba(255,255,255,.5)}
+
+/* ---------- placeholder for user media ---------- */
+.ph{
+  position:relative;border-radius:28px;
+  border:3px dashed var(--indigo);
+  background:repeating-linear-gradient(135deg,rgba(91,83,224,.04) 0 14px,rgba(91,83,224,.08) 14px 28px);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+  color:var(--indigo-d);text-align:center;padding:40px;
+}
+.ph .ico{width:74px;height:74px;opacity:.9}
+.ph .ph-t{font-size:30px;font-weight:800;color:var(--indigo-d)}
+.ph .ph-s{font-size:24px;font-weight:600;color:var(--ink-soft);max-width:84%}
+.ph.coral{border-color:var(--coral-d);color:var(--coral-d);background:repeating-linear-gradient(135deg,rgba(242,128,126,.05) 0 14px,rgba(242,128,126,.1) 14px 28px)}
+.ph.coral .ph-t{color:var(--coral-d)}
+
+/* ---------- chips / tags ---------- */
+.tag{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:24px;padding:10px 22px;border-radius:999px;background:var(--paper);border:2px solid var(--line)}
+.brainbase{display:inline-flex;align-items:center;gap:16px;background:var(--t-indigo);color:var(--indigo-d);font-weight:700;font-size:30px;padding:18px 28px;border-radius:18px;line-height:1.3;max-width:780px;text-wrap:pretty}
+.brainbase svg{width:38px;height:38px;flex:none}
+.brainbase b{font-weight:800;color:var(--ink)}
+
+/* ---------- soft cards ---------- */
+.card{background:var(--paper);border-radius:26px;border:2px solid var(--line);box-shadow:0 18px 44px -28px rgba(43,39,64,.4)}
+
+/* ---------- background science motifs ---------- */
+.motifs{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.motifs svg{position:absolute;opacity:1}
+.motifs use{opacity:.14}
+.content{position:relative;z-index:1}
+
+/* dark sections */
+.dark{background:var(--indigo)}
+.dark, .dark h1,.dark h2,.dark h3,.dark p{color:#fff}
+.dark .kicker{color:#C9C4FF}
+
+/* entrance animation */
+@media (prefers-reduced-motion:no-preference){
+  [data-deck-active] .anim{animation:rise .6s cubic-bezier(.2,.7,.3,1) both}
+  [data-deck-active] .anim2{animation:rise .6s cubic-bezier(.2,.7,.3,1) .12s both}
+  [data-deck-active] .anim3{animation:rise .6s cubic-bezier(.2,.7,.3,1) .24s both}
+  [data-deck-active] .anim4{animation:rise .6s cubic-bezier(.2,.7,.3,1) .36s both}
+  [data-deck-active] .pop{animation:pop .5s cubic-bezier(.2,.8,.3,1.2) .2s both}
+}
+@keyframes rise{from{opacity:0;transform:translateY(42px) scale(.965)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:none}}
+
+/* number badge for pillars */
+.numbadge{display:flex;align-items:center;justify-content:center;width:104px;height:104px;border-radius:30px;font-size:54px;font-weight:800;color:#fff;flex:none;direction:ltr;box-shadow:0 16px 30px -16px rgba(43,39,64,.5)}
+
+/* correspondence table rows (slide 16) */
+.maprow{display:flex;align-items:center;justify-content:flex-start;background:var(--paper);border:2px solid var(--line);border-radius:14px;padding:18px 26px;font-size:31px;font-weight:700;line-height:1.18;text-wrap:balance}
+.maprow2{display:flex;align-items:center;justify-content:flex-start;background:var(--t-indigo);border:2px solid transparent;border-left:7px solid var(--indigo);border-radius:14px;padding:18px 26px;font-size:31px;font-weight:700;line-height:1.18;color:var(--indigo-d);text-wrap:balance}
+.maparr{display:flex;align-items:center;justify-content:center;font-size:40px;color:var(--ink-faint);font-weight:800;direction:ltr}
+
+/* embedded media frames (video / youtube / canva / images) */
+.media{border-radius:20px;overflow:hidden;background:#0c0a18;border:2px solid var(--line);box-shadow:0 20px 46px -26px rgba(43,39,64,.55)}
+.media.r169{position:relative;width:100%;padding-top:56.25%}
+.media.r169 iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vcap{font-size:25px;color:var(--ink-soft);font-weight:600;text-align:center}
+
+/* expand-to-lightbox button on videos */
+.expand-btn{position:absolute;top:14px;left:14px;display:inline-flex;align-items:center;gap:8px;padding:9px 16px 9px 13px;border:0;border-radius:999px;background:rgba(20,17,38,.72);color:#fff;font-family:'Assistant',sans-serif;font-size:20px;font-weight:700;cursor:pointer;z-index:6;backdrop-filter:blur(4px);transition:background .15s,transform .15s}
+.expand-btn:hover{background:var(--indigo);transform:translateY(-1px)}
+.expand-btn svg{flex:none}
+
+/* click-to-play video poster (loads iframe in a lightbox on demand) */
+.video-poster{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center;padding:30px;background:linear-gradient(150deg,var(--indigo) 0%,#3f37b8 100%);color:#fff;transition:filter .15s}
+.video-poster.coral{background:linear-gradient(150deg,var(--coral) 0%,var(--coral-d) 100%)}
+.media.r169:hover .video-poster{filter:brightness(1.06)}
+.play-circle{width:88px;height:88px;border-radius:50%;background:rgba(255,255,255,.18);border:3px solid rgba(255,255,255,.85);display:flex;align-items:center;justify-content:center;padding-left:4px;box-shadow:0 10px 30px -8px rgba(0,0,0,.5)}
+.media.r169:hover .play-circle{background:rgba(255,255,255,.28)}
+.poster-label{font-size:30px;font-weight:800;line-height:1.2}
+.poster-hint{font-size:21px;font-weight:700;background:rgba(255,255,255,.2);padding:7px 20px;border-radius:999px}
+
+/* iframe lightbox (canva / drive) */
+#ilb{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;background:rgba(20,17,38,.9);backdrop-filter:blur(6px);padding:4vh 4vw}
+#ilb .ilb-frame{position:relative;width:min(1500px,92vw);height:min(844px,90vh);background:#000;border-radius:16px;overflow:hidden;box-shadow:0 30px 80px -20px rgba(0,0,0,.7)}
+#ilb #ilb-slot{position:absolute;inset:0}
+#ilb iframe{width:100%;height:100%;border:0;display:block}
+.lb-close{position:absolute;top:24px;left:28px;width:54px;height:54px;border:0;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;font-size:30px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;z-index:2}
+.lb-close:hover{background:rgba(255,255,255,.26)}
+
+/* QR code */
+.qrbox{background:#fff;border-radius:20px;padding:18px;box-shadow:0 18px 40px -22px rgba(43,39,64,.45);display:flex;align-items:center;justify-content:center}
+.qrbox canvas,.qrbox img{display:block;width:100%;height:100%}
+
+/* menti live-cloud link button (slide 2) */
+.menti-link:hover{transform:translateY(-2px);box-shadow:0 18px 34px -14px rgba(0,0,0,.55)}
+
+/* student quote cards (quote wall) */
+.qcard{break-inside:avoid;margin-bottom:20px;background:var(--paper);border:2px solid var(--line);border-right:8px solid var(--indigo);border-radius:18px;padding:22px 26px;box-shadow:0 12px 30px -20px rgba(43,39,64,.45);font-size:29px;line-height:1.4;font-weight:600;color:var(--ink);text-wrap:pretty}
+
+/* phone mockup frame (slide 10 bot chat) */
+.phone{flex:none;border-radius:34px;background:#1b1730;padding:12px 10px;box-shadow:0 26px 56px -24px rgba(43,39,64,.6);position:relative}
+.phone::before{content:"";position:absolute;top:18px;left:50%;transform:translateX(-50%);width:96px;height:7px;border-radius:9px;background:rgba(255,255,255,.22);z-index:2}
+.phone img{display:block;width:100%;height:auto;border-radius:24px}
+
+/* research-topic chips (slide 12) */
+.topicgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 20px}
+.topic{display:flex;align-items:center;gap:18px;background:var(--paper);border:2px solid var(--line);border-radius:20px;padding:20px 24px;box-shadow:0 14px 34px -26px rgba(43,39,64,.5)}
+.topic .tdot{flex:none;width:54px;height:54px;border-radius:16px;display:flex;align-items:center;justify-content:center;color:#fff}
+.topic .tdot svg{width:30px;height:30px}
+.topic .ttxt{font-size:27px;font-weight:700;line-height:1.18;color:var(--ink);text-wrap:balance}
+.topic.v{flex-direction:column;text-align:center;justify-content:center;gap:14px;padding:24px 18px;min-height:188px;background:var(--t,#fff);border-color:transparent}
+.topic.v .ttxt{font-size:25px}
+
+/* teacher tip cards (slide 21) */
+.tipcard{background:var(--paper);border:2px solid var(--line);border-radius:22px;padding:28px 28px 28px 34px;display:flex;flex-direction:column;gap:14px;box-shadow:0 16px 40px -28px rgba(43,39,64,.5);position:relative;overflow:hidden}
+.tipcard::before{content:"";position:absolute;inset:0 auto 0 0;width:9px;background:var(--accent,var(--indigo))}
+.tipcard .tiphead{display:flex;align-items:center;gap:14px}
+.tipcard .tipico{flex:none;width:58px;height:58px;border-radius:16px;display:flex;align-items:center;justify-content:center;color:#fff}
+.tipcard .tipico svg{width:34px;height:34px}
+.tipcard .tiptitle{font-size:29px;font-weight:800;line-height:1.12;color:var(--ink)}
+.tipcard .tiptext{font-size:23px;font-weight:600;line-height:1.36;color:var(--ink-soft)}
+
+/* bold black contour for big display text on dark slides */
+.outlined{-webkit-text-stroke:4px #0d0a1c;paint-order:stroke;text-stroke:4px #0d0a1c}
+
+/* ===================== motion & dynamism ===================== */
+/* hover micro-interactions (subtle lift) */
+.card,.tipcard,.topic,.qcard,.maprow,.maprow2{transition:transform .2s cubic-bezier(.2,.7,.3,1),box-shadow .2s ease}
+.card:hover,.tipcard:hover,.topic:hover,.qcard:hover{transform:translateY(-5px);box-shadow:0 24px 52px -22px rgba(43,39,64,.55)}
+.maprow:hover,.maprow2:hover{transform:translateX(-4px)}
+.menti-link,.expand-btn{will-change:transform}
+
+@media (prefers-reduced-motion:no-preference){
+  /* springier entrances */
+  [data-deck-active] .anim {animation:rise .85s cubic-bezier(.16,.84,.34,1) both}
+  [data-deck-active] .anim2{animation:rise .85s cubic-bezier(.16,.84,.34,1) .18s both}
+  [data-deck-active] .anim3{animation:rise .85s cubic-bezier(.16,.84,.34,1) .36s both}
+  [data-deck-active] .anim4{animation:rise .85s cubic-bezier(.16,.84,.34,1) .54s both}
+
+  /* staggered cascade inside item-walls (opacity-only, so it won't fight the parent's rise) */
+  [data-deck-active] .topicgrid .topic,
+  [data-deck-active] .qcard{animation:riseIn .75s cubic-bezier(.16,.84,.34,1) both}
+  [data-deck-active] .topicgrid .topic:nth-child(1){animation-delay:.35s}
+  [data-deck-active] .topicgrid .topic:nth-child(2){animation-delay:.50s}
+  [data-deck-active] .topicgrid .topic:nth-child(3){animation-delay:.65s}
+  [data-deck-active] .topicgrid .topic:nth-child(4){animation-delay:.80s}
+  [data-deck-active] .topicgrid .topic:nth-child(5){animation-delay:.95s}
+  [data-deck-active] .topicgrid .topic:nth-child(6){animation-delay:1.10s}
+  [data-deck-active] .topicgrid .topic:nth-child(7){animation-delay:1.25s}
+  [data-deck-active] .topicgrid .topic:nth-child(8){animation-delay:1.40s}
+  [data-deck-active] .qcard:nth-child(1){animation-delay:.30s}
+  [data-deck-active] .qcard:nth-child(2){animation-delay:.45s}
+  [data-deck-active] .qcard:nth-child(3){animation-delay:.60s}
+  [data-deck-active] .qcard:nth-child(4){animation-delay:.75s}
+  [data-deck-active] .qcard:nth-child(5){animation-delay:.90s}
+  [data-deck-active] .qcard:nth-child(6){animation-delay:1.05s}
+  [data-deck-active] .qcard:nth-child(7){animation-delay:1.20s}
+  [data-deck-active] .qcard:nth-child(8){animation-delay:1.35s}
+
+  /* numbered pillar badges get a little pop on entrance */
+  [data-deck-active] .numbadge{animation:pop .55s cubic-bezier(.2,.8,.3,1.25) .15s both}
+
+  /* ambient drift of the faint background motifs (pure decoration) */
+  deck-stage section .motifs svg{animation:driftbg 15s ease-in-out infinite;transform-origin:center}
+  /* gentle attention pulse on video "play" CTAs */
+  .play-circle{animation:pulsering 2.6s ease-in-out infinite}
+}
+@keyframes riseIn{from{opacity:0;transform:translateY(36px) scale(.95)}to{opacity:1;transform:none}}
+@keyframes driftbg{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-26px,-30px) scale(1.05)}}
+@keyframes pulsering{0%,100%{box-shadow:0 10px 30px -8px rgba(0,0,0,.5),0 0 0 0 rgba(255,255,255,.4)}70%{box-shadow:0 10px 30px -8px rgba(0,0,0,.5),0 0 0 18px rgba(255,255,255,0)}}

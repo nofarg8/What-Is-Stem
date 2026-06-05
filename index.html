@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>למה לי STEM עכשיו · ממטק</title>
+<link rel="stylesheet" href="deck-styles.css">
+</head>
+<body>
+
+<template id="__bundler_thumbnail" data-bg-color="#FBF9F4">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(600 360)">
+      <path d="M-150 -120 Q-30 -150 -10 -40 Q120 -60 110 60 Q120 170 -20 160 Q-150 200 -170 60 Q-300 70 -270 -60 Q-290 -150 -150 -120 Z" fill="#4FAE63" stroke="#1b1730" stroke-width="10"/>
+      <path d="M90 -110 Q230 -130 230 10 Q250 130 100 130 Q0 130 10 10 Q-10 -90 90 -110 Z" fill="#F2920F" stroke="#1b1730" stroke-width="10"/>
+      <path d="M-130 40 Q40 10 70 140 Q90 270 -70 260 Q-220 270 -220 130 Q-240 50 -130 40 Z" fill="#5B53E0" stroke="#1b1730" stroke-width="10"/>
+      <path d="M120 60 Q260 40 260 160 Q260 270 110 260 Q10 260 30 140 Q20 70 120 60 Z" fill="#F2807E" stroke="#1b1730" stroke-width="10"/>
+    </g>
+    <text x="600" y="700" font-family="Assistant,Arial,sans-serif" font-size="92" font-weight="800" fill="#2B2740" text-anchor="middle">STEM</text>
+  </svg>
+</template>
+
+<!-- ===== SVG sprite: brand mark + science motifs ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="atom" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="7" fill="none" stroke="currentColor" stroke-width="4"/>
+      <ellipse cx="50" cy="50" rx="42" ry="16" fill="none" stroke="currentColor" stroke-width="4"/>
+      <ellipse cx="50" cy="50" rx="42" ry="16" fill="none" stroke="currentColor" stroke-width="4" transform="rotate(60 50 50)"/>
+      <ellipse cx="50" cy="50" rx="42" ry="16" fill="none" stroke="currentColor" stroke-width="4" transform="rotate(120 50 50)"/>
+    </symbol>
+    <symbol id="neuron" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="13" fill="none" stroke="currentColor" stroke-width="4"/>
+      <path d="M50 37 L50 12 M50 37 L28 20 M63 50 L88 44 M58 62 L74 84 M40 60 L18 74 M37 48 L13 52" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="50" cy="12" r="4" fill="currentColor"/><circle cx="88" cy="44" r="4" fill="currentColor"/><circle cx="18" cy="74" r="4" fill="currentColor"/><circle cx="74" cy="84" r="4" fill="currentColor"/>
+    </symbol>
+    <symbol id="ops" viewBox="0 0 100 100">
+      <path d="M50 16 L50 44 M36 30 L64 30" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+      <path d="M22 64 L46 64" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+      <path d="M58 56 L82 76 M82 56 L58 76" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="flask" viewBox="0 0 100 100">
+      <path d="M40 14 L40 42 L20 80 Q18 88 28 88 L72 88 Q82 88 80 80 L60 42 L60 14" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M34 14 L66 14" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+      <path d="M30 66 L70 66" stroke="currentColor" stroke-width="4"/>
+    </symbol>
+    <symbol id="bulb" viewBox="0 0 100 100">
+      <path d="M50 12 Q26 12 26 38 Q26 54 40 64 L40 74 L60 74 L60 64 Q74 54 74 38 Q74 12 50 12 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M42 82 L58 82 M45 90 L55 90" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="dice" viewBox="0 0 100 100">
+      <rect x="20" y="20" width="60" height="60" rx="14" fill="none" stroke="currentColor" stroke-width="4"/>
+      <circle cx="38" cy="38" r="5" fill="currentColor"/><circle cx="62" cy="38" r="5" fill="currentColor"/>
+      <circle cx="38" cy="62" r="5" fill="currentColor"/><circle cx="62" cy="62" r="5" fill="currentColor"/>
+      <circle cx="50" cy="50" r="5" fill="currentColor"/>
+    </symbol>
+    <symbol id="globe" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="38" fill="none" stroke="currentColor" stroke-width="4"/>
+      <ellipse cx="50" cy="50" rx="16" ry="38" fill="none" stroke="currentColor" stroke-width="4"/>
+      <path d="M14 38 L86 38 M12 62 L88 62 M50 12 L50 88" stroke="currentColor" stroke-width="4"/>
+    </symbol>
+    <symbol id="layers" viewBox="0 0 100 100">
+      <path d="M50 16 L86 34 L50 52 L14 34 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M14 50 L50 68 L86 50" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M14 66 L50 84 L86 66" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="image" viewBox="0 0 100 100">
+      <rect x="14" y="20" width="72" height="60" rx="8" fill="none" stroke="currentColor" stroke-width="4"/>
+      <circle cx="36" cy="40" r="7" fill="currentColor"/>
+      <path d="M18 74 L42 50 L58 64 L72 52 L82 62" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="play" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="38" fill="none" stroke="currentColor" stroke-width="4"/>
+      <path d="M42 36 L66 50 L42 64 Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="eye" viewBox="0 0 100 100">
+      <path d="M8 50 Q50 14 92 50 Q50 86 8 50 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+      <circle cx="50" cy="50" r="13" fill="none" stroke="currentColor" stroke-width="4"/>
+      <circle cx="50" cy="50" r="4" fill="currentColor"/>
+    </symbol>
+    <symbol id="shield" viewBox="0 0 100 100">
+      <path d="M50 12 L82 24 V52 Q82 78 50 90 Q18 78 18 52 V24 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M38 50 L47 60 L64 40" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="hands" viewBox="0 0 100 100">
+      <path d="M50 22 L50 8 M50 22 L38 14 M50 22 L62 14" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+      <rect x="30" y="30" width="40" height="26" rx="6" fill="none" stroke="currentColor" stroke-width="4"/>
+      <path d="M22 64 Q50 84 78 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+      <path d="M26 60 L26 72 M74 60 L74 72" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+    </symbol>
+    <!-- brand mark: four-lobe brain cluster -->
+    <symbol id="mk" viewBox="0 0 124 104">
+      <g stroke="#fff" stroke-width="3.5" stroke-linejoin="round">
+        <path d="M44 8 Q70 4 74 26 Q92 24 90 46 Q92 64 70 64 Q46 70 40 50 Q20 52 22 32 Q20 12 44 8 Z" fill="var(--green)"/>
+        <path d="M86 16 Q112 14 112 38 Q116 58 94 60 Q76 60 78 40 Q74 20 86 16 Z" fill="var(--orange)"/>
+        <path d="M40 52 Q70 48 74 72 Q76 94 50 94 Q24 96 24 72 Q22 54 40 52 Z" fill="var(--indigo)"/>
+        <path d="M86 54 Q110 52 110 74 Q110 94 88 92 Q70 92 72 72 Q72 56 86 54 Z" fill="var(--coral)"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<style id="__om-edit-overrides"></style>
+
+<deck-stage width="1920" height="1080">
+
+  <!-- ============ 01 · כותרת ============ -->
+  <section data-label="01 כותרת">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:var(--indigo)">
+        <use href="#atom" x="1480" y="60" width="230" height="230" opacity=".05"/>
+        <use href="#neuron" x="120" y="720" width="200" height="200" opacity=".05"/>
+        <use href="#ops" x="1620" y="760" width="170" height="170" opacity=".06"/>
+      </svg>
+    </div>
+    <div class="pad content" style="flex-direction:row;align-items:center;gap:70px;padding:96px 120px">
+      <!-- text -->
+      <div style="flex:1;display:flex;flex-direction:column;gap:30px">
+        <span class="kicker anim">כנס <span class="eng">STEM</span> · מחוז דרום</span>
+        <h1 class="anim2" style="font-size:120px;line-height:1.05">למה לי <span class="eng" style="color:var(--indigo)">STEM</span><br>עכשיו<span style="color:var(--coral)">?</span></h1>
+        <p class="anim3" style="font-size:34px;color:var(--ink-soft);max-width:660px;font-weight:500">הרצאה לרכזי ומורי מדע וטכנולוגיה</p>
+        <div class="anim4" style="display:flex;align-items:center;gap:16px;margin-top:14px">
+          <span style="width:54px;height:4px;background:var(--coral);border-radius:9px"></span>
+          <span style="font-size:27px;font-weight:700;color:var(--ink)">פיתוח חשיבה עם נופר גרגרוד</span>
+        </div>
+      </div>
+      <!-- logo -->
+      <div class="anim2" style="flex:none;width:600px;position:relative;display:flex;align-items:center;justify-content:center">
+        <div style="position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle at 40% 35%,var(--t-indigo),var(--t-coral) 70%,transparent);filter:blur(8px);opacity:.8"></div>
+        <img src="assets/mamtak-logo-trans-sm.png" alt="לוגו ממטק" style="position:relative;width:600px;height:auto;filter:drop-shadow(0 24px 40px rgba(43,39,64,.18))">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 · ענן מילים (מנטימטר) ============ -->
+  <section data-label="02 ענן מילים">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:var(--indigo)">
+        <use href="#atom" x="90" y="110" width="180" height="180" opacity=".05"/>
+        <use href="#ops" x="1680" y="800" width="160" height="160" opacity=".06"/>
+      </svg>
+    </div>
+    <div class="pad content" style="padding:58px 110px 56px">
+      <div class="anim" style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
+        <span class="tag" style="background:var(--t-indigo);border-color:transparent;color:var(--indigo-d)">שאלה לקהל</span>
+      </div>
+      <h2 class="anim2" style="font-size:80px;max-width:1300px">כשאתם שומעים <span class="eng" style="color:var(--indigo)">STEM</span> -<br>איזו מילה עולה לכם בראש?</h2>
+      <div style="flex:1;display:flex;gap:46px;margin-top:44px;align-items:stretch">
+        <!-- menti code + clickable link -->
+        <div class="anim3 card" style="flex:none;width:540px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px;padding:26px 36px;background:var(--indigo);border-color:transparent">
+          <div style="text-align:center;font-size:26px;font-weight:700;color:#C9C4FF;letter-spacing:.5px">היכנסו ל-<span class="eng" style="font-size:46px;color:#fff">menti.com</span> וסרקו</div>
+          <div style="background:#fff;border-radius:18px;padding:14px"><img src="assets/menti-qr.png" alt="קוד QR למנטימטר" style="width:284px;height:284px;display:block"></div>
+          <div style="display:flex;align-items:center;gap:14px;color:#fff"><span style="font-size:24px;font-weight:600;color:#C9C4FF">או הזינו קוד</span><span style="background:#fff;border-radius:12px;padding:6px 22px;direction:ltr;font-size:40px;font-weight:800;letter-spacing:5px;color:var(--indigo)">58586076</span></div>
+          <a href="https://www.mentimeter.com/app/presentation/aley8wrsrhyhi12pn6ea69zq6kmjsxiy/edit?question=swcwvdjsgpe3" target="_blank" rel="noopener" class="menti-link" style="display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--indigo-d);text-decoration:none;font-size:22px;font-weight:800;padding:12px 26px;border-radius:999px;box-shadow:0 12px 26px -14px rgba(0,0,0,.45);transition:transform .15s,box-shadow .15s">
+            <svg viewBox="0 0 100 100" style="width:24px;height:24px;flex:none;color:var(--indigo)"><use href="#play"/></svg>
+            פתחו את ענן המילים החי
+            <span style="direction:ltr;font-weight:900">↗</span>
+          </a>
+        </div>
+        <!-- sample word cloud -->
+        <div class="anim4 card" style="flex:1;display:flex;flex-direction:column;padding:36px 40px;overflow:hidden;background:linear-gradient(160deg,#fff 0%,var(--t-indigo) 140%)">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:6px">
+            <span style="width:14px;height:14px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 5px var(--t-coral)"></span>
+            <span style="font-size:24px;font-weight:700;color:var(--ink-soft)">המילים שלכם יופיעו כאן · בזמן אמת</span>
+          </div>
+          <div style="flex:1;display:flex;flex-wrap:wrap;align-content:center;justify-content:center;align-items:center;gap:14px 28px;line-height:1;padding:8px 0">
+            <span style="font-size:74px;font-weight:800;color:var(--indigo);transform:rotate(-4deg)">מחשבים</span>
+            <span style="font-size:48px;font-weight:700;color:var(--orange-d)">הנדסה</span>
+            <span style="font-size:92px;font-weight:800;color:#fff;background:var(--coral);padding:6px 26px;border-radius:18px;transform:rotate(2deg)">רובוטים</span>
+            <span style="font-size:42px;font-weight:600;color:var(--ink-soft)">ניסויים</span>
+            <span style="font-size:64px;font-weight:800;color:var(--green-d);transform:rotate(-3deg)">מדע</span>
+            <span style="font-size:70px;font-weight:800;color:var(--orange)">בנייה</span>
+            <span style="font-size:48px;font-weight:700;color:#fff;background:var(--indigo);padding:5px 22px;border-radius:14px;transform:rotate(-2deg)">תכנות</span>
+            <span style="font-size:40px;font-weight:600;color:var(--coral-d)">חדשנות</span>
+            <span style="font-size:54px;font-weight:700;color:var(--green);transform:rotate(3deg)">מתמטיקה</span>
+            <span style="font-size:52px;font-weight:700;color:var(--indigo)">טכנולוגיה</span>
+            <span style="font-size:42px;font-weight:600;color:var(--ink-soft)">מעבדה</span>
+            <span style="font-size:40px;font-weight:700;color:var(--orange-d);transform:rotate(-3deg)">חלל</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
+    <div class="pagenum">02 / 24</div>
+  </section>
+
+  <!-- ============ 03 · הדפוס ============ -->
+  <section data-label="03 הדפוס">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:var(--orange)">
+        <use href="#ops" x="120" y="120" width="170" height="170" opacity=".06"/>
+        <use href="#flask" x="1560" y="700" width="190" height="190" opacity=".05"/>
+      </svg>
+    </div>
+    <div class="pad content center" style="padding:84px 120px">
+      <span class="kicker anim" style="color:var(--orange-d)">הדפוס שחוזר</span>
+      <h2 class="anim2" style="font-size:90px;max-width:1480px;margin-top:18px;line-height:1.1">הסתכלו על הענן שלנו</h2>
+      <div class="anim3" style="display:inline-flex;align-items:center;gap:16px;margin-top:58px;background:var(--t-orange);border-radius:999px;padding:20px 40px">
+        <svg viewBox="0 0 100 100" style="width:38px;height:38px;color:var(--orange-d)"><use href="#bulb"/></svg>
+        <span style="font-size:34px;font-weight:700;color:var(--ink)">נחזיק את התמונה הזו לרגע - ונחזור אליה בסוף.</span>
+      </div>
+    </div>
+    <div class="foot"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
+    <div class="pagenum">03 / 24</div>
+  </section>
+
+  <!-- ============ 04 · מה חושבים מול איך באמת ============ -->
+  <section data-label="04 מה חושבים / איך באמת">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:var(--indigo)">
+        <use href="#eye" x="80" y="120" width="180" height="180"/>
+        <use href="#flask" x="1650" y="780" width="180" height="180"/>
+      </svg>
+    </div>
+    <div class="pad content" style="padding:64px 90px 80px">
+      <div class="anim" style="margin-bottom:24px">
+        <span class="kicker" style="color:var(--indigo)">מה חושבים על <span class="eng">STEM</span></span>
+        <h2 style="font-size:62px;margin-top:8px"><span class="eng" style="background:var(--t-indigo);color:var(--indigo-d);padding:2px 18px;border-radius:14px">STEM</span> זה רק לבנות דברים?</h2>
+      </div>
+      <div style="flex:1;display:flex;gap:38px;align-items:stretch">
+        <!-- מה חושבים -->
+        <div class="anim2" style="flex:1;display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="font-size:28px;font-weight:800;color:var(--ink-soft)">מה חושבים</span>
+            <span style="height:3px;flex:1;background:var(--line);border-radius:9px"></span>
+          </div>
+          <div class="media" style="flex:1;background:#fff"><img src="assets/stereotype-stem.jpg" alt="STEM זה לבנות טחנת רוח" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          <div class="vcap">"<span class="eng">STEM</span> זה רק לבנות" - הסטריאוטיפ</div>
+        </div>
+        <!-- איך באמת -->
+        <div class="anim3" style="flex:1;display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="font-size:28px;font-weight:800;color:var(--coral-d)">איך באמת</span>
+            <span style="height:3px;flex:1;background:linear-gradient(90deg,var(--coral),var(--indigo));border-radius:9px"></span>
+          </div>
+          <div class="media r169" style="flex:1;min-height:0;cursor:pointer" onclick="openVideoLightbox('assets/neuroscience-mozart.mp4')">
+            <div class="video-poster">
+              <div class="play-circle"><svg viewBox="0 0 24 24" width="34" height="34"><path d="M8 5v14l11-7z" fill="#fff"/></svg></div>
+              <div class="poster-label">קורס מדעי המוח<br><span style="font-weight:600;opacity:.92">חוקרים את הסונטה ה-9 של מוצרט</span></div>
+              <div class="poster-hint">לחצו לצפייה</div>
+            </div>
+          </div>
+          <div class="vcap">קורס מדעי המוח - הסונטה ה-9 של מוצרט</div>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
+    <div class="pagenum">04 / 24</div>
+  </section>
+
+  <!-- ============ 04 · הפיתול ============ -->
+  <section data-label="05 הפיתול" class="dark">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:#fff">
+        <use href="#atom" x="1460" y="120" width="240" height="240" opacity=".08"/>
+        <use href="#neuron" x="120" y="660" width="230" height="230" opacity=".08"/>
+        <use href="#ops" x="1560" y="740" width="170" height="170" opacity=".09"/>
+      </svg>
+    </div>
+    <div class="pad content center">
+      <span class="kicker anim" style="color:#C9C4FF">רגע של פיתול</span>
+      <h2 class="anim2 outlined" style="font-size:92px;max-width:1400px;margin-top:14px">בעצם, לא נדבר על <span class="eng" style="color:#fff;text-decoration:underline;text-decoration-color:var(--coral);text-underline-offset:12px;text-decoration-thickness:6px">STEM</span>.</h2>
+      <h2 class="anim3 outlined" style="font-size:92px;max-width:1400px;margin-top:18px;color:var(--coral)">נדבר על הוראה פרואקטיבית.</h2>
+      <p class="anim4" style="font-size:32px;color:rgba(255,255,255,.82);max-width:1000px;margin-top:36px;font-weight:500">נשים את STEM בצד לרגע.</p>
+    </div>
+    <div class="foot on-dark"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
+    <div class="pagenum on-dark">05 / 24</div>
+  </section>
+
+  <!-- ============ · מה זו הוראה פרואקטיבית ============ -->
+  <section data-label="06 מה זו הוראה פרואקטיבית">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:var(--indigo)">
+        <use href="#neuron" x="90" y="120" width="180" height="180" opacity=".05"/>
+        <use href="#atom" x="1690" y="780" width="180" height="180" opacity=".05"/>
+      </svg>
+    </div>
+    <div class="pad content" style="padding:68px 110px 84px">
+      <div class="anim" style="margin-bottom:8px">
+        <span class="kicker" style="color:var(--coral-d)">הרעיון הגדול של הוראה פרו-אקטיבית
+
+</span>
+        <h2 style="font-size:74px;margin-top:8px">מה זו <span style="color:var(--indigo)">הוראה פרואקטיבית</span>?</h2>
+      </div>
+      <p class="anim2" style="font-size:31px;color:var(--ink-soft);font-weight:600;max-width:1300px;line-height:1.4">גישה <strong style="color:var(--ink)">יזומה</strong>: מזהים צרכים מראש, מונעים קשיים לפני שהם נוצרים, והתלמידים בונים ידע כשותפים פעילים.</p>
+      <div style="flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px;align-content:center">
+        <div class="card anim2" style="padding:34px;display:flex;flex-direction:column;gap:18px;border-top:8px solid var(--indigo)">
+          <span style="width:78px;height:78px;border-radius:22px;background:var(--t-indigo);display:flex;align-items:center;justify-content:center;color:var(--indigo)"><svg viewBox="0 0 100 100" style="width:46px;height:46px"><use href="#eye"/></svg></span>
+          <div style="font-size:33px;font-weight:800;line-height:1.15">מזהים צרכים מראש</div>
+          <div style="font-size:24px;color:var(--ink-soft);font-weight:600">צופים את הקושי לפני שהוא צץ</div>
+        </div>
+        <div class="card anim3" style="padding:34px;display:flex;flex-direction:column;gap:18px;border-top:8px solid var(--orange)">
+          <span style="width:78px;height:78px;border-radius:22px;background:var(--t-orange);display:flex;align-items:center;justify-content:center;color:var(--orange-d)"><svg viewBox="0 0 100 100" style="width:46px;height:46px"><use href="#shield"/></svg></span>
+          <div style="font-size:33px;font-weight:800;line-height:1.15">מונעים קשיים מראש</div>
+          <div style="font-size:24px;color:var(--ink-soft);font-weight:600">מתכננים, במקום להגיב בדיעבד</div>
+        </div>
+        <div class="card anim4" style="padding:34px;display:flex;flex-direction:column;gap:18px;border-top:8px solid var(--green)">
+          <span style="width:78px;height:78px;border-radius:22px;background:var(--t-green);display:flex;align-items:center;justify-content:center;color:var(--green-d)"><svg viewBox="0 0 100 100" style="width:46px;height:46px"><use href="#hands"/></svg></span>
+          <div style="font-size:33px;font-weight:800;line-height:1.15">בונים ידע יחד</div>
+          <div style="font-size:24px;color:var(--ink-soft);font-weight:600">התלמיד שותף פעיל, לא מקבל מוכן</div>
+        </div>
+      </div>
+      <p class="anim4" style="text-align:center;font-size:25px;color:var(--indigo);font-weight:700;margin-top:22px">ששת הנדבכים - איך עושים את זה בפועל:</p>
+      <div class="anim4" style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px;margin-top:14px">
+        <span style="display:inline-flex;align-items:center;gap:8px;font-size:22px;font-weight:700;color:var(--indigo-d);background:var(--t-indigo);border-radius:999px;padding:8px 18px"><b style="direction:ltr">1</b> קונסטרוקטיביזם ופיגומים</span>
+        <span style="display:inline-flex;align-items:center;gap:8px;font-size:22px;font-weight:700;color:var(--green-d);background:var(--t-green);border-radius:999px;padding:8px 18px"><b style="direction:ltr">2</b> חקר ופתרון בעיות</span>
+        <span style="display:inline-flex;align-items:center;gap:8px;font-size:22px;font-weight:700;color:var(--orange-d);background:var(--t-orange);border-radius:999px;padding:8px 18px"><b style="direction:ltr">3</b> קישור לעולם האמיתי</span>
+        <span style="display:inline-flex;align-items:center;gap:8px;font-size:22px;font-weight:700;color:var(--coral-d);background:var(--t-coral);border-radius:999px;padding:8px 18px"><b style="direction:ltr">4</b> טיפוח הלומד העצמאי</span>
+        <span style="display:inline-flex;align-items:center;gap:8px;font-size:22px;font-weight:700;color:var(--indigo-d);background:var(--t-indigo);border-radius:999px;padding:8px 18px"><b style="direction:ltr">5</b> משחוק</span>
+        <span style="display:inline-flex;align-items:center;gap:8px;font-size:22px;font-weight:700;color:var(--green-d);background:var(--t-green);border-radius:999px;padding:8px 18px"><b style="direction:ltr">6</b> מולטי-דיסציפלינריות</span>
+      </div>
+    </div>
+    <div class="foot"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
+    <div class="pagenum">06 / 24</div>
+  </section>
+
+  <!-- ============ 05 · קונסטרוקטיביזם ============ -->
+  <section data-label="07 קונסטרוקטיביזם">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:var(--indigo)">
+        <use href="#atom" x="90" y="110" width="190" height="190"/>
+        <use href="#neuron" x="1660" y="770" width="180" height="180"/>
+      </svg>
+    </div>
+    <div class="pad content" style="flex-direction:row;align-items:center;gap:56px;padding:34px 80px">
+      <div style="flex:1.04;display:flex;flex-direction:column;gap:24px">
+        <div class="anim" style="display:flex;align-items:center;gap:20px">
+          <span class="numbadge" style="background:var(--indigo)">01</span>
+          <div>
+            <div class="kicker" style="color:var(--indigo);font-size:22px">הוראה פרואקטיבית · נדבך 1 מתוך 6</div>
+            <div style="font-size:38px;font-weight:800;color:var(--ink);margin-top:4px">קונסטרוקטיביזם ופיגומים</div>
+          </div>
+        </div>
+        <h2 class="anim2" style="font-size:40px;line-height:1.16">התלמידים בונים את הידע בעצמם - לא קולטים אותו פסיבית. <span style="color:var(--ink-faint)">(פיאז'ה)</span></h2>
+        <p class="anim2" style="font-size:27px;color:var(--indigo-d);font-weight:700;line-height:1.35">זו למידה שמאפשרת לנו להגיע לחשיבה מסדר גבוה.</p>
+        <div class="anim3" style="background:var(--t-indigo);border-radius:18px;padding:20px 24px">
+          <p style="font-size:25px;line-height:1.45;color:var(--ink-soft);font-weight:600">בחדר הבריחה "מבנה האטום" כל חדר נשען על הקודם, החידות דורשות הבנה ולא שינון, והתלמידים מרכיבים אטומים בעצמם. הם לא קיבלו את הידע - הם בנו אותו. כך בונים על ידע קיים, צעד אחר צעד.</p>
+        </div>
+        <div class="anim3 brainbase" style="align-self:flex-start">
+          <svg viewBox="0 0 100 100"><use href="#neuron"/></svg>
+          <span>הבסיס המוחי · ידע שהמוח <b>בונה בעצמו</b> מקודד עמוק יותר ונשמר לאורך זמן</span>
+        </div>
+      </div>
+      <div class="anim2" style="flex:1.15;align-self:center;display:flex;flex-direction:column;gap:12px">
+        <div class="media" style="position:relative">
+          <video src="assets/escape-room-atom.mp4" controls playsinline preload="metadata" style="width:100%;max-height:560px;object-fit:contain;background:#0c0a18;display:block"></video>
+          <button class="expand-btn" onclick="openVideoLightbox('assets/escape-room-atom.mp4', this)" aria-label="הגדל סרטון">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            <span>הגדל</span>
+          </button>
+        </div>
+        <div class="vcap">חדר הבריחה "מבנה האטום" - התלמידים מרכיבים אטומים בעצמם</div>
+        <div style="display:flex;justify-content:center;margin-top:6px"><div class="media" style="width:720px;border:2px solid var(--line)"><img src="assets/escape-room-example.png" alt="דוגמה מתוך חדר הבריחה - שלב מספר אטומי" style="width:100%;display:block"></div></div>
+        <div class="vcap" style="font-size:21px">דוגמה מתוך החדר - שלב "מספר אטומי"</div>
+      </div>
+    </div>
+    <div class="foot"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
+    <div class="pagenum">07 / 24</div>
+  </section>
+
+  <!-- ============ 06 · חקר ופתרון בעיות ============ -->
+  <section data-label="08 חקר ופתרון בעיות">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:var(--green)">
+        <use href="#flask" x="85" y="130" width="180" height="180"/>
+        <use href="#ops" x="1670" y="780" width="170" height="170"/>
+      </svg>
+    </div>
+    <div class="pad content" style="flex-direction:row;align-items:center;gap:56px">
+      <div style="flex:1.04;display:flex;flex-direction:column;gap:22px">
+        <div class="anim" style="display:flex;align-items:center;gap:20px">
+          <span class="numbadge" style="background:var(--green)">02</span>
+          <div>
+            <div class="kicker" style="color:var(--green-d);font-size:22px">הוראה פרואקטיבית · נדבך 2 מתוך 6</div>
+            <div style="font-size:36px;font-weight:800;color:var(--ink);margin-top:4px">למידת חקר ופתרון בעיות</div>
+          </div>
+        </div>
+        <p class="anim2" style="font-size:25px;color:var(--ink-soft);font-weight:600">תלמידים שקיבלו ממני עבודה כשיפור ציון מבחן.</p>
+        <h2 class="anim2" style="font-size:52px;line-height:1.1;color:var(--green-d)">איך משל "השועל והחסידה" בכלל קשור להוראת מדעים?</h2>
+        <div class="anim3 brainbase" style="margin-top:2px;align-self:flex-start;background:var(--t-green);color:var(--green-d)">
+          <svg viewBox="0 0 100 100"><use href="#neuron"/></svg>
+          הבסיס המוחי · המוח מעבד טוב יותר את מה שהוא פותר בעצמו
+        </div>
+      </div>
+      <div class="anim2" style="flex:1.1;align-self:center;display:flex;flex-direction:column;gap:14px">
+        <div class="media" style="background:#fff"><img src="assets/fox-stork.jpg" alt="השועל והחסידה" style="width:100%;height:auto;max-height:700px;object-fit:contain;display:block;background:#fff"></div>
+        <div class="vcap">"השועל והחסידה"</div>
+      </div>
+    </div>
+    <div class="foot"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
+    <div class="pagenum">08 / 24</div>
+  </section>
+
+  <!-- ============ 07 · קישור לעולם האמיתי ============ -->
+  <section data-label="09 קישור לעולם">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:var(--orange)">
+        <use href="#globe" x="80" y="120" width="185" height="185"/>
+        <use href="#flask" x="1660" y="770" width="175" height="175"/>
+      </svg>
+    </div>
+    <div class="pad content" style="flex-direction:row;align-items:center;gap:56px">
+      <div style="flex:1.04;display:flex;flex-direction:column;gap:24px">
+        <div class="anim" style="display:flex;align-items:center;gap:20px">
+          <span class="numbadge" style="background:var(--orange)">03</span>
+          <div>
+            <div style="display:flex;align-items:center;gap:10px"><span class="tag" style="background:var(--orange);border-color:transparent;color:#fff;font-weight:800;letter-spacing:1px;font-size:22px;padding:6px 16px"><span class="eng">CASE STUDY</span></span><span class="kicker" style="color:var(--orange-d);font-size:22px">נדבך 3 מתוך 6</span></div>
+            <div style="font-size:38px;font-weight:800;color:var(--ink);margin-top:6px">קישור לעולם האמיתי</div>
+          </div>
+        </div>
+        <h2 class="anim2" style="font-size:50px;line-height:1.12">מתחילים מהסיפור -<br><span style="color:var(--orange-d)">לא מהתיאוריה.</span></h2>
+        <p class="anim3" style="font-size:24px;color:var(--ink-soft);font-weight:600;line-height:1.4">פתיחת השיעור על מערכת החיסון: מה היה בעולם לפני שהיו חיסונים - ורק אז נכנסנו לחומר.</p>
+        <div class="anim3 brainbase" style="margin-top:2px;align-self:flex-start;background:var(--t-orange);color:var(--orange-d)">
+          <svg viewBox="0 0 100 100"><use href="#neuron"/></svg>
+          הבסיס המוחי · המוח זוכר דרך משמעות
+        </div>
+      </div>
+      <div class="anim2" style="flex:.92;align-self:center;display:flex;flex-direction:column;gap:14px">
+        <div class="media" style="background:#fff"><img src="assets/vaccine-slide-1.png" alt="שקף פתיחה - מה היה במאות ה-17 וה-18" style="width:100%;max-height:392px;object-fit:contain;display:block;background:#fff"></div>
+        <div class="media" style="background:#fff"><img src="assets/vaccine-slide-2.png" alt="שקף - סיפורו של הרופא אדוארד ג'נר" style="width:100%;max-height:392px;object-fit:contain;display:block;background:#fff"></div>
+      </div>
+    </div>
+    <div class="foot"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
+    <div class="pagenum">09 / 24</div>
+  </section>
+  <!-- ============ 08 · לומד עצמאי ============ -->
+  <section data-label="10 לומד עצמאי">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:var(--coral)">
+        <use href="#ops" x="85" y="125" width="175" height="175"/>
+        <use href="#atom" x="1660" y="775" width="185" height="185"/>
+      </svg>
+    </div>
+    <div class="pad content" style="flex-direction:row;align-items:center;gap:56px">
+      <div style="flex:1.04;display:flex;flex-direction:column;gap:24px">
+        <div class="anim" style="display:flex;align-items:center;gap:20px">
+          <span class="numbadge" style="background:var(--coral)">04</span>
+          <div>
+            <div class="kicker" style="color:var(--coral-d);font-size:22px">הוראה פרואקטיבית · נדבך 4 מתוך 6</div>
+            <div style="font-size:38px;font-weight:800;color:var(--ink);margin-top:4px">פיתוח הלומד העצמאי</div>
+          </div>
+        </div>
+        <h2 class="anim2" style="font-size:46px;line-height:1.12">כיתה הפוכה ומשימות חקר <span style="color:var(--coral-d)">עם פיגומים.</span></h2>
+        <p class="anim2" style="font-size:24px;line-height:1.4;color:var(--ink-soft);font-weight:600;background:var(--t-coral);border-radius:16px;padding:16px 20px;max-width:760px">בניתי בוט לפונקציה קווית וריבועית שמלווה את התלמידים שלב-שלב. הם עובדים איתו בבית, בקצב שלהם - למידה עצמאית ופעילה.</p>
+        <!-- video of the bot in action -->
+        <div class="anim3" style="display:flex;flex-direction:column;gap:10px;margin-top:2px;width:560px;max-width:100%">
+          <div class="media r169" style="cursor:pointer" onclick="openVideoLightbox('assets/math-bot.mp4')">
+            <div class="video-poster coral">
+              <div class="play-circle"><svg viewBox="0 0 24 24" width="34" height="34"><path d="M8 5v14l11-7z" fill="#fff"/></svg></div>
+              <div class="poster-label">הבוט המתמטי בפעולה<br><span style="font-weight:600;opacity:.92">פונקציה קווית וריבועית</span></div>
+              <div class="poster-hint">לחצו לצפייה</div>
+            </div>
+          </div>
+          <div class="vcap" style="text-align:right">הבוט המתמטי בפעולה - פונקציה קווית וריבועית</div>
+        </div>
+      </div>
+      <!-- big, clean bot-chat screenshot -->
+      <div class="anim2" style="flex:none;align-self:center;display:flex;flex-direction:column;align-items:center;gap:12px">
+        <img src="assets/bot-chat.png" alt="התכתבות עם הבוט המתמטי - תחום עלייה וירידה" style="width:472px;height:auto;max-height:800px;border-radius:22px;box-shadow:0 26px 56px -24px rgba(43,39,64,.5);background:#fff;display:block">
+        <div class="vcap" style="font-size:23px">התכתבות אמיתית מהכיתה</div>
+      </div>
+    </div>
+    <div class="foot"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
+    <div class="pagenum">10 / 24</div>
+  </section>
+
+  <!-- ============ 09 · משחוק ============ -->
+  <section data-label="11 משחוק">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:var(--indigo)">
+        <use href="#dice" x="80" y="120" width="185" height="185"/>
+        <use href="#neuron" x="1660" y="775" width="180" height="180"/>
+      </svg>
+    </div>
+    <div class="pad content" style="flex-direction:row;align-items:center;gap:56px">
+      <div style="flex:1.04;display:flex;flex-direction:column;gap:24px">
+        <div class="anim" style="display:flex;align-items:center;gap:20px">
+          <span class="numbadge" style="background:var(--indigo)">05</span>
+          <div>
+            <div class="kicker" style="color:var(--indigo);font-size:22px">הוראה פרואקטיבית · נדבך 5 מתוך 6</div>
+            <div style="font-size:38px;font-weight:800;color:var(--ink);margin-top:4px">משחוק</div>
+          </div>
+        </div>
+        <h2 class="anim2" style="font-size:54px;line-height:1.1">הופכים את התהליך<br><span style="color:var(--indigo)">לחוויה פעילה.</span></h2>
+        <p class="anim2" style="font-size:25px;line-height:1.4;color:var(--ink-soft);font-weight:600;background:var(--t-indigo);border-radius:16px;padding:18px 22px">בהצגה התלמידים גילמו "מה עובר על וירוס כשהוא חודר אלינו, ומה קורה לחיידק" - והניעו את התהליך בגוף שלהם.</p>
+        <div class="anim3 brainbase" style="margin-top:2px;align-self:flex-start">
+          <svg viewBox="0 0 100 100"><use href="#neuron"/></svg>
+          הבסיס המוחי · עיבוד רב-חושי - תנועה, דיבור וראייה - יוצר יותר עוגני זיכרון
+        </div>
+      </div>
+      <div class="anim2" style="flex:1.05;align-self:center;display:flex;flex-direction:column;gap:12px">
+        <div class="media" style="background:#fff"><img src="assets/play-virus.jpg" alt="הצגת תלמידים - וירוס וחיידק" style="width:100%;max-height:560px;object-fit:cover;display:block"></div>
+        <div class="vcap">"אני וירוס, אני לא חי, אני זקוק למארח!" - התלמידים מגלמים וירוס וחיידק</div>
+      </div>
+    </div>
+    <div class="foot"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
+    <div class="pagenum">11 / 24</div>
+  </section>
+
+  <!-- ============ 10 · מולטי-דיסציפלינריות ============ -->
+  <section data-label="12 מולטי-דיסציפלינריות">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:var(--indigo)">
+        <use href="#neuron" x="80" y="120" width="170" height="170" opacity=".05"/>
+        <use href="#atom" x="1700" y="800" width="170" height="170" opacity=".05"/>
+      </svg>
+    </div>
+    <div class="pad content" style="padding:38px 80px 40px">
+      <!-- header -->
+      <div class="anim" style="display:flex;align-items:flex-start;gap:22px;margin-bottom:10px">
+        <span class="numbadge" style="width:78px;height:78px;font-size:40px;border-radius:22px;background:conic-gradient(from 220deg,var(--green),var(--orange),var(--coral),var(--indigo),var(--green))">06</span>
+        <div style="flex:1">
+          <div class="kicker" style="color:var(--ink-soft);font-size:22px">הוראה פרואקטיבית · נדבך 6 מתוך 6</div>
+          <h2 style="font-size:44px;margin-top:4px">מולטי-דיסציפלינריות - <span style="color:var(--indigo)">נושא אחד, כל הזוויות</span></h2>
+          <p style="font-size:23px;color:var(--ink-soft);font-weight:600;margin-top:4px;max-width:1560px">בעבודת חקר במדעי המוח כל תלמיד צלל לנושא אחר ושילב ביולוגיה, כימיה, פיזיקה, מתמטיקה וטכנולוגיה - אלו הנושאים שחקרו:</p>
+        </div>
+      </div>
+      <!-- posters image + research topics -->
+      <div style="flex:1;display:flex;gap:44px;align-items:stretch;justify-content:center;min-height:0">
+        <div class="anim2" style="flex:none;width:606px;display:flex;flex-direction:column;gap:10px">
+          <div class="media" style="flex:1;min-height:0;background:#fff;position:relative;cursor:pointer" onclick="openImageLightbox('assets/posters-full.png','פוסטרים לעבודת חקר במדעי המוח')">
+            <img src="assets/posters-brain.png" alt="פוסטרים לעבודת חקר במדעי המוח" style="width:100%;height:100%;object-fit:contain;display:block;background:#fff">
+            <button class="expand-btn" onclick="event.stopPropagation();openImageLightbox('assets/posters-full.png','פוסטרים לעבודת חקר במדעי המוח')" aria-label="הגדל תמונה">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              <span>הגדל</span>
+            </button>
+          </div>
+          <div class="vcap" style="font-size:22px">פוסטרים מעבודת החקר - מדעי המוח · לחצו להגדלה</div>
+        </div>
+        <div class="topicgrid anim3" style="flex:none;width:620px;grid-template-columns:repeat(2,1fr);gap:14px;align-content:center">
+          <div class="topic" style="background:var(--t-indigo);border-color:transparent;padding:15px 18px;gap:14px"><span class="tdot" style="width:48px;height:48px;background:var(--indigo)"><svg viewBox="0 0 100 100"><use href="#neuron"/></svg></span><span class="ttxt" style="font-size:23px">מבנה הנוירונים והסינפסות הכימיות</span></div>
+          <div class="topic" style="background:var(--t-coral);border-color:transparent;padding:15px 18px;gap:14px"><span class="tdot" style="width:48px;height:48px;background:var(--coral)"><svg viewBox="0 0 100 100"><use href="#neuron"/></svg></span><span class="ttxt" style="font-size:23px">השפעות המוזיקה על המוח</span></div>
+          <div class="topic" style="background:var(--t-green);border-color:transparent;padding:15px 18px;gap:14px"><span class="tdot" style="width:48px;height:48px;background:var(--green)"><svg viewBox="0 0 100 100"><use href="#neuron"/></svg></span><span class="ttxt" style="font-size:23px">נוירוטרנסמיטורים של שמחה</span></div>
+          <div class="topic" style="background:var(--t-orange);border-color:transparent;padding:15px 18px;gap:14px"><span class="tdot" style="width:48px;height:48px;background:var(--orange)"><svg viewBox="0 0 100 100"><use href="#eye"/></svg></span><span class="ttxt" style="font-size:23px">אשליות אופטיות</span></div>
+          <div class="topic" style="background:var(--t-coral);border-color:transparent;padding:15px 18px;gap:14px"><span class="tdot" style="width:48px;height:48px;background:var(--coral-d)"><svg viewBox="0 0 100 100"><use href="#neuron"/></svg></span><span class="ttxt" style="font-size:23px">אלצהיימר</span></div>
+          <div class="topic" style="background:var(--t-green);border-color:transparent;padding:15px 18px;gap:14px"><span class="tdot" style="width:48px;height:48px;background:var(--green-d)"><svg viewBox="0 0 100 100"><use href="#neuron"/></svg></span><span class="ttxt" style="font-size:23px">גיזום סינפטי</span></div>
+          <div class="topic" style="background:var(--t-indigo);border-color:transparent;padding:15px 18px;gap:14px"><span class="tdot" style="width:48px;height:48px;background:var(--indigo-d)"><svg viewBox="0 0 100 100"><use href="#bulb"/></svg></span><span class="ttxt" style="font-size:23px">אנשים ללא דמיון</span></div>
+          <div class="topic" style="background:var(--t-orange);border-color:transparent;padding:15px 18px;gap:14px"><span class="tdot" style="width:48px;height:48px;background:var(--orange-d)"><svg viewBox="0 0 100 100"><use href="#layers"/></svg></span><span class="ttxt" style="font-size:23px">איבוד זיכרון</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
+    <div class="pagenum">12 / 24</div>
+  </section>
+  <!-- ============ 11 · ששת הנדבכים ============ -->
+  <section data-label="13 ששת הנדבכים">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:var(--indigo)">
+        <use href="#atom" x="60" y="60" width="170" height="170" opacity=".05"/>
+        <use href="#neuron" x="1700" y="800" width="180" height="180" opacity=".05"/>
+      </svg>
+    </div>
+    <div class="pad content" style="padding:74px 110px 84px">
+      <div class="anim" style="text-align:center;margin-bottom:6px">
+        <span class="kicker" style="color:var(--indigo)">הוראה פרואקטיבית · סיכום</span>
+        <h2 style="font-size:64px;margin-top:10px">ששת הנדבכים של ההוראה הפרואקטיבית</h2>
+      </div>
+      <div style="flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:36px">
+        <div class="card anim2" style="padding:26px 28px;display:flex;flex-direction:column;gap:12px;border-top:9px solid var(--indigo)">
+          <div style="display:flex;align-items:center;justify-content:space-between"><span style="width:64px;height:64px;border-radius:18px;background:var(--indigo);display:flex;align-items:center;justify-content:center;color:#fff"><svg viewBox="0 0 100 100" style="width:38px;height:38px"><use href="#atom"/></svg></span><span style="font-size:46px;font-weight:800;color:var(--indigo);opacity:.32;direction:ltr">01</span></div>
+          <div style="font-size:29px;font-weight:800;line-height:1.12">קונסטרוקטיביזם ופיגומים</div>
+          <div style="font-size:22px;font-weight:600;color:var(--ink-soft)">בונים ידע צעד אחר צעד</div>
+        </div>
+        <div class="card anim2" style="padding:26px 28px;display:flex;flex-direction:column;gap:12px;border-top:9px solid var(--green)">
+          <div style="display:flex;align-items:center;justify-content:space-between"><span style="width:64px;height:64px;border-radius:18px;background:var(--green);display:flex;align-items:center;justify-content:center;color:#fff"><svg viewBox="0 0 100 100" style="width:38px;height:38px"><use href="#flask"/></svg></span><span style="font-size:46px;font-weight:800;color:var(--green-d);opacity:.32;direction:ltr">02</span></div>
+          <div style="font-size:29px;font-weight:800;line-height:1.12">חקר ופתרון בעיות</div>
+          <div style="font-size:22px;font-weight:600;color:var(--ink-soft)">מגיעים למסקנה בעצמם</div>
+        </div>
+        <div class="card anim2" style="padding:26px 28px;display:flex;flex-direction:column;gap:12px;border-top:9px solid var(--orange)">
+          <div style="display:flex;align-items:center;justify-content:space-between"><span style="width:64px;height:64px;border-radius:18px;background:var(--orange);display:flex;align-items:center;justify-content:center;color:#fff"><svg viewBox="0 0 100 100" style="width:38px;height:38px"><use href="#globe"/></svg></span><span style="font-size:46px;font-weight:800;color:var(--orange-d);opacity:.32;direction:ltr">03</span></div>
+          <div style="font-size:29px;font-weight:800;line-height:1.12">קישור לעולם האמיתי</div>
+          <div style="font-size:22px;font-weight:600;color:var(--ink-soft)">מתחילים מהסיפור, לא מהתיאוריה</div>
+        </div>
+        <div class="card anim3" style="padding:26px 28px;display:flex;flex-direction:column;gap:12px;border-top:9px solid var(--coral)">
+          <div style="display:flex;align-items:center;justify-content:space-between"><span style="width:64px;height:64px;border-radius:18px;background:var(--coral);display:flex;align-items:center;justify-content:center;color:#fff"><svg viewBox="0 0 100 100" style="width:38px;height:38px"><use href="#ops"/></svg></span><span style="font-size:46px;font-weight:800;color:var(--coral-d);opacity:.32;direction:ltr">04</span></div>
+          <div style="font-size:29px;font-weight:800;line-height:1.12">טיפוח הלומד העצמאי</div>
+          <div style="font-size:22px;font-weight:600;color:var(--ink-soft)">לומדים בקצב אישי</div>
+        </div>
+        <div class="card anim3" style="padding:26px 28px;display:flex;flex-direction:column;gap:12px;border-top:9px solid var(--indigo-d)">
+          <div style="display:flex;align-items:center;justify-content:space-between"><span style="width:64px;height:64px;border-radius:18px;background:var(--indigo-d);display:flex;align-items:center;justify-content:center;color:#fff"><svg viewBox="0 0 100 100" style="width:38px;height:38px"><use href="#dice"/></svg></span><span style="font-size:46px;font-weight:800;color:var(--indigo-d);opacity:.32;direction:ltr">05</span></div>
+          <div style="font-size:29px;font-weight:800;line-height:1.12">משחוק</div>
+          <div style="font-size:22px;font-weight:600;color:var(--ink-soft)">חוויה פעילה ורב-חושית</div>
+        </div>
+        <div class="card anim3" style="padding:26px 28px;display:flex;flex-direction:column;gap:12px;border-top:9px solid var(--green-d)">
+          <div style="display:flex;align-items:center;justify-content:space-between"><span style="width:64px;height:64px;border-radius:18px;background:conic-gradient(from 220deg,var(--green),var(--orange),var(--coral),var(--indigo),var(--green));display:flex;align-items:center;justify-content:center;color:#fff"><svg viewBox="0 0 100 100" style="width:38px;height:38px"><use href="#layers"/></svg></span><span style="font-size:46px;font-weight:800;color:var(--green-d);opacity:.32;direction:ltr">06</span></div>
+          <div style="font-size:29px;font-weight:800;line-height:1.12">מולטי-דיסציפלינריות</div>
+          <div style="font-size:22px;font-weight:600;color:var(--ink-soft)">נושא אחד, כל הזוויות</div>
+        </div>
+      </div>
+      <p class="anim4" style="text-align:center;font-size:28px;color:var(--ink-soft);font-weight:600;margin-top:30px">בונים ידע, סביב בעיה, מחוברת לעולם, מתוך עשייה.</p>
+    </div>
+    <div class="foot"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
+    <div class="pagenum">13 / 24</div>
+  </section>
+  <!-- ============ 12 · הוראת STEM חלק א' ============ -->
+  <section data-label="14 נדבכי STEM א">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:var(--indigo)">
+        <use href="#atom" x="1660" y="120" width="185" height="185"/>
+        <use href="#ops" x="90" y="780" width="170" height="170"/>
+      </svg>
+    </div>
+    <div class="pad content" style="flex-direction:row;align-items:center;gap:70px">
+      <!-- STEM tiles -->
+      <div class="anim" style="flex:none;display:flex;flex-direction:column;gap:18px">
+        <div style="width:128px;height:128px;border-radius:30px;background:var(--green);color:#fff;font-size:64px;font-weight:800;display:flex;align-items:center;justify-content:center;direction:ltr;box-shadow:0 16px 30px -16px rgba(43,39,64,.5)">S</div>
+        <div style="width:128px;height:128px;border-radius:30px;background:var(--orange);color:#fff;font-size:64px;font-weight:800;display:flex;align-items:center;justify-content:center;direction:ltr;box-shadow:0 16px 30px -16px rgba(43,39,64,.5)">T</div>
+        <div style="width:128px;height:128px;border-radius:30px;background:var(--indigo);color:#fff;font-size:64px;font-weight:800;display:flex;align-items:center;justify-content:center;direction:ltr;box-shadow:0 16px 30px -16px rgba(43,39,64,.5)">E</div>
+        <div style="width:128px;height:128px;border-radius:30px;background:var(--coral);color:#fff;font-size:64px;font-weight:800;display:flex;align-items:center;justify-content:center;direction:ltr;box-shadow:0 16px 30px -16px rgba(43,39,64,.5)">M</div>
+      </div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:18px">
+        <div class="anim" style="display:flex;align-items:baseline;gap:16px;margin-bottom:2px">
+          <span class="kicker" style="color:var(--indigo)">הוראת <span class="eng">STEM</span> · נדבכים 1-3</span>
+        </div>
+        <h2 class="anim2" style="font-size:66px;margin-bottom:2px;line-height:1.04">עכשיו בואו נחזור ל-<span class="eng" style="color:var(--indigo)">STEM</span></h2>
+        <div class="anim2" style="font-size:30px;font-weight:700;color:var(--ink-soft);margin-bottom:10px">הנדבכים העיקריים שלו</div>
+        <div class="anim3 card" style="display:flex;align-items:center;gap:22px;padding:22px 28px;border-right:8px solid var(--green)">
+          <span class="numbadge" style="width:74px;height:74px;font-size:38px;border-radius:20px;background:var(--green)">1</span>
+          <div><div style="font-size:33px;font-weight:800;line-height:1.14">גישה רב-תחומית ואינטגרטיבית</div><div style="font-size:23px;font-weight:600;color:var(--ink-soft)">מולטי-דיסציפלינרית</div></div>
+        </div>
+        <div class="anim3 card" style="display:flex;align-items:center;gap:22px;padding:22px 28px;border-right:8px solid var(--orange)">
+          <span class="numbadge" style="width:74px;height:74px;font-size:38px;border-radius:20px;background:var(--orange)">2</span>
+          <div><div style="font-size:33px;font-weight:800;line-height:1.14">למידה התנסותית</div><div style="font-size:23px;font-weight:600;color:var(--ink-soft)"><span class="eng">hands-on</span> · חקר ותכן הנדסי</div></div>
+        </div>
+        <div class="anim4 card" style="display:flex;align-items:center;gap:22px;padding:22px 28px;border-right:8px solid var(--indigo)">
+          <span class="numbadge" style="width:74px;height:74px;font-size:38px;border-radius:20px;background:var(--indigo)">3</span>
+          <div><div style="font-size:33px;font-weight:800;line-height:1.14">קישור לעולם האמיתי</div><div style="font-size:23px;font-weight:600;color:var(--ink-soft)">מתחילים מהמציאות</div></div>
+        </div>
+        <div class="anim4 tag" style="align-self:flex-start;margin-top:10px;background:var(--t-indigo);border-color:transparent;color:var(--indigo-d)">במה אתם מבחינים כעת?</div>
+      </div>
+    </div>
+    <div class="foot"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
+    <div class="pagenum">14 / 24</div>
+  </section>
+
+  <!-- ============ 13 · הוראת STEM חלק ב' ============ -->
+  <section data-label="15 נדבכי STEM ב">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:var(--indigo)">
+        <use href="#flask" x="1660" y="120" width="180" height="180"/>
+        <use href="#neuron" x="90" y="780" width="185" height="185"/>
+      </svg>
+    </div>
+    <div class="pad content" style="flex-direction:row;align-items:center;gap:70px">
+      <div class="anim" style="flex:none;display:flex;flex-direction:column;gap:18px;opacity:.45">
+        <div style="width:128px;height:128px;border-radius:30px;background:var(--green);color:#fff;font-size:64px;font-weight:800;display:flex;align-items:center;justify-content:center;direction:ltr">S</div>
+        <div style="width:128px;height:128px;border-radius:30px;background:var(--orange);color:#fff;font-size:64px;font-weight:800;display:flex;align-items:center;justify-content:center;direction:ltr">T</div>
+        <div style="width:128px;height:128px;border-radius:30px;background:var(--indigo);color:#fff;font-size:64px;font-weight:800;display:flex;align-items:center;justify-content:center;direction:ltr">E</div>
+        <div style="width:128px;height:128px;border-radius:30px;background:var(--coral);color:#fff;font-size:64px;font-weight:800;display:flex;align-items:center;justify-content:center;direction:ltr">M</div>
+      </div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:18px">
+        <div class="anim" style="display:flex;align-items:baseline;gap:16px;margin-bottom:4px">
+          <span class="kicker" style="color:var(--indigo)">הוראת <span class="eng">STEM</span> · נדבכים 4-6</span>
+        </div>
+        <h2 class="anim2" style="font-size:54px;margin-bottom:8px">וההמשך - <span style="color:var(--coral-d)">מוכר?</span></h2>
+        <div class="anim3 card" style="display:flex;align-items:center;gap:22px;padding:22px 28px;border-right:8px solid var(--coral)">
+          <span class="numbadge" style="width:74px;height:74px;font-size:38px;border-radius:20px;background:var(--coral)">4</span>
+          <div><div style="font-size:30px;font-weight:800;line-height:1.14">פיתוח מסוגלות עצמית והלומד העצמאי</div><div style="font-size:23px;font-weight:600;color:var(--ink-soft)">אמונה ביכולת, למידה עצמאית</div></div>
+        </div>
+        <div class="anim3 card" style="display:flex;align-items:center;gap:22px;padding:22px 28px;border-right:8px solid var(--green)">
+          <span class="numbadge" style="width:74px;height:74px;font-size:38px;border-radius:20px;background:var(--green)">5</span>
+          <div><div style="font-size:33px;font-weight:800;line-height:1.14">שימוש מושכל בטכנולוגיה</div><div style="font-size:23px;font-weight:600;color:var(--ink-soft)">כלי, לא מטרה</div></div>
+        </div>
+        <div class="anim4 card" style="display:flex;align-items:center;gap:22px;padding:22px 28px;border-right:8px solid var(--orange)">
+          <span class="numbadge" style="width:74px;height:74px;font-size:38px;border-radius:20px;background:var(--orange)">6</span>
+          <div><div style="font-size:33px;font-weight:800;line-height:1.14">חשיבה מסדר גבוה ופתרון בעיות מורכבות</div><div style="font-size:23px;font-weight:600;color:var(--ink-soft)">מעבר לשינון</div></div>
+        </div>
+        <div class="anim4 tag" style="align-self:flex-start;margin-top:10px;background:var(--t-coral);border-color:transparent;color:var(--coral-d)">זה כבר נשמע מוכר.....</div>
+      </div>
+    </div>
+    <div class="foot"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
+    <div class="pagenum">15 / 24</div>
+  </section>
+  <!-- ============ 16 · ההקבלה - נדבך מול נדבך ============ -->
+  <section data-label="16 ההקבלה">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:var(--indigo)">
+        <use href="#layers" x="80" y="120" width="180" height="180"/>
+        <use href="#atom" x="1665" y="780" width="175" height="175"/>
+      </svg>
+    </div>
+    <div class="pad content" style="padding:60px 90px 78px">
+      <div class="anim" style="text-align:center;margin-bottom:22px">
+        <span class="kicker" style="color:var(--coral-d)">הגילוי</span>
+        <h2 style="font-size:58px;margin-top:8px">רואים את הדמיון? נדבך מול נדבך</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 92px 1fr;gap:14px 0;align-items:stretch;max-width:1640px;margin-inline:auto;width:100%">
+        <div class="anim2" style="text-align:center;font-size:27px;font-weight:800;color:var(--coral-d);padding-bottom:6px">הוראה פרואקטיבית</div>
+        <div></div>
+        <div class="anim2" style="text-align:center;font-size:27px;font-weight:800;color:var(--indigo);padding-bottom:6px">הוראת <span class="eng">STEM</span></div>
+
+        <div class="anim2 maprow" style="border-right:7px solid var(--indigo)">קונסטרוקטיביזם ופיגומים</div>
+        <div class="anim2 maparr">→</div>
+        <div class="anim2 maprow2">חשיבה מסדר גבוה ופתרון בעיות מורכבות</div>
+
+        <div class="anim2 maprow" style="border-right:7px solid var(--green)">למידת חקר ופתרון בעיות</div>
+        <div class="anim2 maparr">→</div>
+        <div class="anim2 maprow2">למידה התנסותית (<span class="eng">hands-on</span>)</div>
+
+        <div class="anim3 maprow" style="border-right:7px solid var(--orange)">קישור לעולם האמיתי</div>
+        <div class="anim3 maparr">→</div>
+        <div class="anim3 maprow2">קישור לעולם האמיתי</div>
+
+        <div class="anim3 maprow" style="border-right:7px solid var(--coral)">לומד עצמאי ושימוש מושכל בטכנולוגיה</div>
+        <div class="anim3 maparr">→</div>
+        <div class="anim3 maprow2">מסוגלות עצמית ושימוש מושכל בטכנולוגיה</div>
+
+        <div class="anim4 maprow" style="border-right:7px solid var(--green-d)">מולטי-דיסציפלינריות</div>
+        <div class="anim4 maparr">→</div>
+        <div class="anim4 maprow2">גישה רב-תחומית ואינטגרטיבית</div>
+
+        <div class="anim4 maprow" style="border-right:7px solid var(--coral-d)">משחוק</div>
+        <div class="anim4 maparr">→</div>
+        <div class="anim4 maprow2">הנעה דרך אתגר אותנטי</div>
+      </div>
+      <p class="anim4" style="text-align:center;font-size:26px;color:var(--ink-soft);font-weight:700;margin-top:24px">שורה אחר שורה - אותו רעיון. כל דוגמה בהוראה הפרואקטיבית היא בעצם דוגמה ל-<span class="eng">STEM</span>.</p>
+    </div>
+    <div class="foot"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
+    <div class="pagenum">16 / 24</div>
+  </section>
+  <!-- ============ 15 · הטענה · שורש אחד ============ -->
+  <section data-label="17 הטענה">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:var(--indigo)">
+        <use href="#neuron" x="85" y="120" width="185" height="185"/>
+        <use href="#ops" x="1665" y="780" width="170" height="170"/>
+      </svg>
+    </div>
+    <div class="pad content" style="padding:74px 110px 84px">
+      <div class="anim" style="text-align:center;margin-bottom:14px">
+        <span class="kicker" style="color:var(--indigo)">הטענה</span>
+        <h2 style="font-size:56px;margin-top:8px;max-width:1500px;margin-inline:auto">לא שתי גישות שדומות -<br>אותה פדגוגיה משתי זוויות.</h2>
+      </div>
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0">
+        <div style="display:flex;gap:60px;align-items:stretch;width:100%;max-width:1300px">
+          <div class="anim2 card" style="flex:1;padding:34px;border-top:8px solid var(--indigo)">
+            <div style="font-size:30px;font-weight:800;color:var(--indigo);margin-bottom:10px"><span class="eng">STEM</span></div>
+            <div style="font-size:26px;font-weight:600;color:var(--ink-soft);line-height:1.35">מתאר את <strong style="color:var(--ink)">ארגון התוכן</strong> - רב-תחומי, סביב בעיה.</div>
+          </div>
+          <div class="anim2 card" style="flex:1;padding:34px;border-top:8px solid var(--coral)">
+            <div style="font-size:30px;font-weight:800;color:var(--coral-d);margin-bottom:10px">הוראה פרואקטיבית</div>
+            <div style="font-size:26px;font-weight:600;color:var(--ink-soft);line-height:1.35">מתארת את <strong style="color:var(--ink)">העמדה הקוגניטיבית</strong> - בונים ידע, מקדימים את הקושי.</div>
+          </div>
+        </div>
+        <!-- connectors -->
+        <svg width="420" height="70" viewBox="0 0 420 70" style="margin:2px 0"><path d="M90 4 Q210 64 210 64 Q210 64 330 4" fill="none" stroke="var(--ink-faint)" stroke-width="3" stroke-dasharray="3 9" stroke-linecap="round"/></svg>
+        <div class="pop" style="background:linear-gradient(135deg,var(--indigo),var(--coral));color:#fff;padding:26px 46px;border-radius:24px;text-align:center;box-shadow:0 20px 40px -20px rgba(91,83,224,.7)">
+          <div style="font-size:22px;font-weight:700;opacity:.85;margin-bottom:4px">אותו עיקרון</div>
+          <div style="font-size:34px;font-weight:800">התלמיד/ה מבנה חשיבה מתוך עשייה, סביב בעיה אמיתית</div>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
+    <div class="pagenum">17 / 24</div>
+  </section>
+  <!-- ============ 17 · המשפט שמאחד ============ -->
+  <section data-label="18 המשפט שמאחד" class="dark">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:#fff">
+        <use href="#atom" x="120" y="120" width="200" height="200" opacity=".08"/>
+        <use href="#neuron" x="1560" y="700" width="220" height="220" opacity=".08"/>
+      </svg>
+    </div>
+    <div class="pad content center" style="position:absolute">
+      <h2 class="anim2 outlined" style="font-size:96px;max-width:1500px;line-height:1.14">מי שמלמדת פרואקטיבית<br>כבר עושה <span class="eng" style="color:#fff;background:var(--coral);padding:2px 24px;border-radius:16px">STEM</span></h2>
+    </div>
+    <div class="foot on-dark"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
+    <div class="pagenum on-dark">18 / 24</div>
+  </section>
+
+  <!-- ============ 19 · ציטוטים מהתלמידים (שכפול שקף השאלה, ללא QR) ============ -->
+  <section data-label="19 ציטוטים">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:var(--coral)">
+        <use href="#atom" x="80" y="700" width="200" height="200" opacity=".05"/>
+        <use href="#ops" x="1640" y="120" width="170" height="170" opacity=".06"/>
+        <use href="#globe" x="1620" y="760" width="190" height="190" opacity=".05"/>
+      </svg>
+    </div>
+    <div class="pad content" style="padding:44px 76px 54px">
+      <div class="anim" style="text-align:center;margin-bottom:18px">
+        <span class="kicker" style="color:var(--coral-d)">התלמידים עונים · קורס מדעי המוח</span>
+        <h2 style="font-size:54px;margin-top:8px">למה לי <span class="eng" style="color:var(--indigo)">STEM</span> עכשיו?</h2>
+        <div style="font-size:46px;font-weight:800;color:var(--coral-d);margin-top:12px">בואו נראה את התוצאות של הלמידה הזו:</div>
+      </div>
+      <div class="anim2" style="flex:1;column-count:3;column-gap:24px">
+        <div class="qcard" style="border-right-color:var(--indigo)">"אני ממש אוהבת את השיעור, לא הייתי משנה כלום! כל פעם שיש מדעי המוח אני מסוקרנת ומחכה לשיעור הבא. ממש תודה שאת מעבירה לנו את הקורס :)"</div>
+        <div class="qcard" style="border-right-color:var(--green)">"יותר קל ללמוד ולזכור חומר כזה כשנהנים ומרגישים שיוצרים ועושים תוך כדי - ואז יש יותר מוטיבציה להעמיק בחומר!"</div>
+        <div class="qcard" style="border-right-color:var(--coral);font-weight:800;font-size:38px;color:var(--coral-d);text-align:center">"לא הייתי משנה כלום!!!"</div>
+        <div class="qcard" style="border-right-color:var(--orange)">"אני מאוד אוהב את עבודת החקר שלנו וקיבלתי הדרכה מאוד ברורה. הפרויקט תורם לחוויה שלי מהקורס - אני מרגיש שאני מאוד מבין, והעבודה עם החברים כיפית מאוד."</div>
+        <div class="qcard" style="border-right-color:var(--green-d)">"אהבתי את השיעורים שעשינו בהם דברים מעשיים בעצמנו - זה יותר כיף ומעניין."</div>
+        <div class="qcard" style="border-right-color:var(--indigo-d)">"אהבתי את השיעור שבו חיפשנו מידע והכנו מצגת (למשל על המוח של כלבים). הסרטונים מאוד מפורטים וזה עוזר לי מאוד."</div>
+        <div class="qcard" style="border-right-color:var(--coral-d)">"אני ממש אהבתי את כל הקורס, היה מעניין ללמוד גם קצת כימיה."</div>
+        <div class="qcard" style="border-right-color:var(--orange-d)">"אהבתי במיוחד את העבודה במחשבים ואת הפעילות של השיר - לרכז חומר ולהפוך אותו למצגת זה חשוב גם לעתיד, וההפעלה היצירתית הייתה כיפית."</div>
+      </div>
+    </div>
+    <div class="foot"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
+    <div class="pagenum">19 / 24</div>
+  </section>
+
+  <!-- ============ 18 · אז למה לי STEM עכשיו ============ -->
+  <section data-label="20 למה לי STEM עכשיו">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:var(--indigo)">
+        <use href="#atom" x="80" y="700" width="200" height="200" opacity=".05"/>
+        <use href="#ops" x="1640" y="120" width="170" height="170" opacity=".06"/>
+        <use href="#globe" x="1620" y="760" width="190" height="190" opacity=".05"/>
+      </svg>
+    </div>
+    <div class="pad content" style="flex-direction:row;align-items:center;gap:60px;padding:80px 110px">
+      <!-- the question -->
+      <div style="flex:1.05;display:flex;flex-direction:column;gap:22px">
+        <span class="kicker anim" style="color:var(--coral-d)">אז, נחזור לשאלה</span>
+        <h1 class="anim2" style="font-size:100px;line-height:1.08">למה לי <span class="eng" style="color:var(--indigo)">STEM</span><br>עכשיו<span style="color:var(--coral)">?</span></h1>
+        <div class="anim3" style="display:flex;gap:14px;flex-wrap:wrap">
+          <span class="tag" style="font-size:25px;background:var(--t-indigo);border-color:transparent;color:var(--indigo-d)">AI בכל מקום</span>
+          <span class="tag" style="font-size:25px;background:var(--t-coral);border-color:transparent;color:var(--coral-d)">בעיות מורכבות</span>
+          <span class="tag" style="font-size:25px;background:var(--t-orange);border-color:transparent;color:var(--orange-d)">עולם משתנה ללא הרף</span>
+        </div>
+        <p class="anim4" style="font-size:28px;color:var(--ink-soft);font-weight:600;max-width:760px;line-height:1.4">עולם שמתגמל חשיבה, פתרון בעיות והסתגלות - לא שליפת עובדות. <span class="eng">STEM</span> אינו תוספת ללו"ז, אלא ההכנה הרלוונטית לעולם הזה.</p>
+      </div>
+      <!-- live answer card: Mentimeter only, big QR -->
+      <div class="anim2 card" style="flex:none;width:540px;display:flex;flex-direction:column;align-items:center;gap:18px;padding:36px 40px">
+        <div style="text-align:center;font-size:34px;font-weight:800;color:var(--ink)">סרקו את הקוד</div>
+        <div style="font-size:26px;font-weight:700;color:var(--indigo-d)">מנטימטר · <span class="eng">menti.com</span></div>
+        <div style="background:#fff;border-radius:18px;padding:14px;border:3px solid var(--t-indigo)"><img src="assets/menti-qr.png" alt="קוד QR למנטימטר" style="width:340px;height:340px;display:block"></div>
+        <div style="display:flex;align-items:center;gap:14px"><span style="font-size:25px;font-weight:600;color:var(--ink-soft)">או קוד</span><span style="background:var(--t-indigo);border-radius:12px;padding:8px 26px;direction:ltr;font-size:44px;font-weight:800;letter-spacing:5px;color:var(--indigo)">58586076</span></div>
+      </div>
+    </div>
+    <div class="foot"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
+    <div class="pagenum">20 / 24</div>
+  </section>
+
+  <!-- ============ 19b · גיבוי AnswerGarden (שכפול של 19) ============ -->
+  <section data-label="21 גיבוי">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:var(--coral)">
+        <use href="#atom" x="80" y="700" width="200" height="200" opacity=".05"/>
+        <use href="#ops" x="1640" y="120" width="170" height="170" opacity=".06"/>
+        <use href="#globe" x="1620" y="760" width="190" height="190" opacity=".05"/>
+      </svg>
+    </div>
+    <div class="pad content" style="flex-direction:row;align-items:center;gap:60px;padding:80px 110px">
+      <!-- the question -->
+      <div style="flex:1.05;display:flex;flex-direction:column;gap:22px">
+        <span class="kicker anim" style="color:var(--coral-d)">גיבוי · אם מנטי לא עובד</span>
+        <h1 class="anim2" style="font-size:100px;line-height:1.08">למה לי <span class="eng" style="color:var(--indigo)">STEM</span><br>עכשיו<span style="color:var(--coral)">?</span></h1>
+        <div class="anim3" style="display:flex;gap:14px;flex-wrap:wrap">
+          <span class="tag" style="font-size:25px;background:var(--t-indigo);border-color:transparent;color:var(--indigo-d)">AI בכל מקום</span>
+          <span class="tag" style="font-size:25px;background:var(--t-coral);border-color:transparent;color:var(--coral-d)">בעיות מורכבות</span>
+          <span class="tag" style="font-size:25px;background:var(--t-orange);border-color:transparent;color:var(--orange-d)">עולם משתנה ללא הרף</span>
+        </div>
+        <p class="anim4" style="font-size:28px;color:var(--ink-soft);font-weight:600;max-width:760px;line-height:1.4">עולם שמתגמל חשיבה, פתרון בעיות והסתגלות - לא שליפת עובדות. <span class="eng">STEM</span> אינו תוספת ללו"ז, אלא ההכנה הרלוונטית לעולם הזה.</p>
+      </div>
+      <!-- backup answer card: AnswerGarden, big QR -->
+      <div class="anim2 card" style="flex:none;width:540px;display:flex;flex-direction:column;align-items:center;gap:18px;padding:36px 40px;border-top:8px solid var(--coral)">
+        <div style="text-align:center;font-size:34px;font-weight:800;color:var(--ink)">גיבוי · סרקו את הקוד</div>
+        <div style="font-size:26px;font-weight:700;color:var(--coral-d)"><span class="eng">AnswerGarden</span></div>
+        <div style="background:#fff;border-radius:18px;padding:14px;border:3px solid var(--t-coral)"><div class="qrbox" data-qr="https://answergarden.ch/share/5185625" data-size="322" style="width:322px;height:322px"></div></div>
+        <a href="https://answergarden.ch/share/5185625" target="_blank" rel="noopener" class="menti-link" style="display:inline-flex;align-items:center;gap:10px;background:var(--coral);color:#fff;text-decoration:none;font-size:24px;font-weight:800;padding:13px 28px;border-radius:999px;direction:ltr;transition:transform .15s,box-shadow .15s">פתחו לענות <span style="font-weight:900">↗</span></a>
+      </div>
+    </div>
+    <div class="foot"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
+    <div class="pagenum">21 / 24</div>
+  </section>
+
+  <!-- ============ 19 · סיום · טיפים למורות ============ -->
+  <section data-label="22 טיפים לכיתה">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:var(--indigo)">
+        <use href="#neuron" x="90" y="120" width="180" height="180" opacity=".05"/>
+        <use href="#atom" x="1680" y="780" width="180" height="180" opacity=".05"/>
+      </svg>
+    </div>
+    <div class="pad content" style="padding:58px 96px 74px">
+      <div class="anim" style="text-align:center;margin-bottom:8px">
+        <span class="kicker" style="color:var(--coral-d)">לקראת סיום</span>
+        <h2 style="font-size:60px;margin-top:8px">מה לוקחים מחר לכיתה?</h2>
+        <p style="font-size:28px;color:var(--ink-soft);font-weight:600;margin-top:12px;max-width:1300px;margin-inline:auto">כל מה שראינו היום, מזוקק לארבעה צעדים פשוטים לקידום למידת <span class="eng" style="color:var(--indigo);font-weight:800">STEM</span> - <strong style="color:var(--ink)">ואתן כבר יודעות לעשות את זה.</strong></p>
+      </div>
+      <div style="flex:1;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;align-content:center;margin-top:22px">
+        <div class="tipcard anim2" style="--accent:var(--orange);min-height:440px;justify-content:flex-start;gap:20px">
+          <div style="display:flex;align-items:center;justify-content:space-between"><span class="tipico" style="background:var(--orange);width:76px;height:76px"><svg viewBox="0 0 100 100"><use href="#globe"/></svg></span><span style="font-size:80px;font-weight:800;color:var(--orange);opacity:.2;direction:ltr;line-height:.9">1</span></div>
+          <span class="tiptitle" style="font-size:31px">פִּתחו מבעיה אמיתית</span>
+          <div class="tiptext" style="font-size:24px">התחילו משאלה או סיפור מהעולם - לא מהגדרה. המוח זוכר דרך משמעות.</div>
+        </div>
+        <div class="tipcard anim2" style="--accent:var(--indigo);min-height:440px;justify-content:flex-start;gap:20px">
+          <div style="display:flex;align-items:center;justify-content:space-between"><span class="tipico" style="background:var(--indigo);width:76px;height:76px"><svg viewBox="0 0 100 100"><use href="#atom"/></svg></span><span style="font-size:80px;font-weight:800;color:var(--indigo);opacity:.2;direction:ltr;line-height:.9">2</span></div>
+          <span class="tiptitle" style="font-size:31px">תנו להם לבנות את הידע בעצמם</span>
+          <div class="tiptext" style="font-size:24px">חקר, חדר בריחה, חידה - שהתלמידים יגיעו למסקנה בעצמם, לא יקבלו מוכן.</div>
+        </div>
+        <div class="tipcard anim3" style="--accent:var(--coral);min-height:440px;justify-content:flex-start;gap:20px">
+          <div style="display:flex;align-items:center;justify-content:space-between"><span class="tipico" style="background:var(--coral);width:76px;height:76px"><svg viewBox="0 0 100 100"><use href="#dice"/></svg></span><span style="font-size:80px;font-weight:800;color:var(--coral);opacity:.2;direction:ltr;line-height:.9">3</span></div>
+          <span class="tiptitle" style="font-size:31px">הוסיפו משחק ולמידה רב-ערוצית</span>
+          <div class="tiptext" style="font-size:24px">משחוק והצגה מפעילים כמה חושים יחד - ויוצרים יותר עוגני זיכרון.</div>
+        </div>
+        <div class="tipcard anim3" style="--accent:var(--green);min-height:440px;justify-content:flex-start;gap:20px">
+          <div style="display:flex;align-items:center;justify-content:space-between"><span class="tipico" style="background:var(--green);width:76px;height:76px"><svg viewBox="0 0 100 100"><use href="#layers"/></svg></span><span style="font-size:80px;font-weight:800;color:var(--green);opacity:.2;direction:ltr;line-height:.9">4</span></div>
+          <span class="tiptitle" style="font-size:31px">חברו תחומים וטכנולוגיה</span>
+          <div class="tiptext" style="font-size:24px">נושא אחד מכמה זוויות, עם בוט או כיתה הפוכה לליווי אישי בקצב של כל תלמיד.</div>
+        </div>
+      </div>
+      <div class="anim4" style="display:flex;align-items:center;justify-content:center;gap:18px;margin-top:34px">
+        <img src="assets/mamtak-logo-trans-sm.png" alt="לוגו ממטק" style="width:64px;height:auto">
+        <span style="width:46px;height:4px;background:var(--coral);border-radius:9px"></span>
+        <span style="font-size:30px;font-weight:800;color:var(--ink)">פיתוח חשיבה עם נופר גרגרוד</span>
+      </div>
+    </div>
+    <div class="pagenum">22 / 24</div>
+  </section>
+
+  <!-- ============ 22 · מי אני ============ -->
+  <section data-label="23 מי אני">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:var(--indigo)">
+        <use href="#neuron" x="80" y="760" width="190" height="190" opacity=".05"/>
+        <use href="#atom" x="1680" y="110" width="190" height="190" opacity=".05"/>
+        <use href="#ops" x="120" y="120" width="150" height="150" opacity=".06"/>
+      </svg>
+    </div>
+    <div class="pad content" style="flex-direction:row;align-items:center;gap:64px;padding:78px 120px">
+      <!-- text -->
+      <div style="flex:1.3;display:flex;flex-direction:column;gap:18px">
+        <div class="anim" style="display:flex;align-items:center;gap:28px">
+          <img src="assets/mamtak-logo-trans-sm.png" alt="לוגו ממטק - נופר גרגרוד · פיתוח חשיבה" style="width:250px;height:auto;flex:none;filter:drop-shadow(0 16px 28px rgba(43,39,64,.18))">
+          <div>
+            <span class="kicker" style="color:var(--coral-d)">מי אני</span>
+            <h2 style="font-size:62px;line-height:1;margin-top:6px">נופר גרגרוד</h2>
+          </div>
+        </div>
+        <div class="anim2" style="display:flex;gap:10px;flex-wrap:wrap">
+          <span class="tag" style="background:var(--t-indigo);border-color:transparent;color:var(--indigo-d);font-size:22px;padding:8px 18px">מורה</span>
+          <span class="tag" style="background:var(--t-green);border-color:transparent;color:var(--green-d);font-size:22px;padding:8px 18px">מדריכה</span>
+          <span class="tag" style="background:var(--t-orange);border-color:transparent;color:var(--orange-d);font-size:22px;padding:8px 18px">מרצה על מדעי המוח</span>
+          <span class="tag" style="background:var(--t-coral);border-color:transparent;color:var(--coral-d);font-size:22px;padding:8px 18px">מפתחת טכנו-פדגוגית</span>
+        </div>
+        <p class="anim3" style="font-size:33px;font-weight:800;color:var(--indigo);border-right:6px solid var(--coral);padding-right:18px;margin-top:6px">"תמיד הגדרתי את עצמי כמורת <span class="eng">STEM</span>"</p>
+        <p class="anim3" style="font-size:40px;color:var(--ink-soft);font-weight:600;max-width:760px;line-height:1.35">מלווה אנשי חינוך לפיתוח כלי למידה והוראה משמעותית ויצירתית באמצעים טכנולוגיים.</p>
+      </div>
+      <!-- thanks + QR + live link -->
+      <div class="anim2 card" style="flex:none;width:474px;align-self:center;display:flex;flex-direction:column;align-items:center;gap:0;padding:0;overflow:hidden">
+        <div style="width:100%;background:linear-gradient(135deg,var(--indigo),var(--coral));color:#fff;text-align:center;padding:24px;font-size:33px;font-weight:800">תודה על ההקשבה</div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:20px;padding:28px 34px 32px">
+          <div class="qrbox" data-qr="https://nofarg8.github.io/Link-in-bio-Nofar/" data-size="340" style="width:340px;height:340px"></div>
+          <a href="https://nofarg8.github.io/Link-in-bio-Nofar/" target="_blank" rel="noopener" class="menti-link" style="display:inline-flex;align-items:center;gap:11px;background:var(--indigo);color:#fff;text-decoration:none;font-size:23px;font-weight:800;padding:14px 24px;border-radius:999px;box-shadow:0 12px 26px -14px rgba(91,83,224,.6);direction:ltr;transition:transform .15s,box-shadow .15s">
+            <svg viewBox="0 0 100 100" style="width:26px;height:26px;flex:none"><use href="#globe"/></svg>
+            <span>nofarg8.github.io/Link-in-bio</span>
+            <span style="font-weight:900">↗</span>
+          </a>
+          <div style="font-size:22px;font-weight:600;color:var(--ink-faint);text-align:center">סרקו את הקוד או לחצו על הקישור - נשמח להישאר בקשר</div>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
+    <div class="pagenum">23 / 24</div>
+  </section>
+
+  <!-- ============ 22 · לאן ממשיכים · טבלת סדנאות (שכפול של 21 + טבלה) ============ -->
+  <section data-label="24 לאן ממשיכים">
+    <div class="motifs">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style="color:var(--indigo)">
+        <use href="#neuron" x="80" y="760" width="190" height="190" opacity=".05"/>
+        <use href="#atom" x="1680" y="110" width="190" height="190" opacity=".05"/>
+        <use href="#ops" x="120" y="120" width="150" height="150" opacity=".06"/>
+      </svg>
+    </div>
+    <div class="pad content" style="flex-direction:column;align-items:center;gap:16px;padding:30px 60px 26px">
+      <!-- שכפול מדויק של שקף "מי אני" (מוקטן כדי לפנות מקום לטבלה) -->
+      <div class="anim" style="flex:none;height:420px;width:100%;display:flex;justify-content:center;align-items:flex-start;overflow:visible">
+        <div style="transform:scale(0.70);transform-origin:top center;display:flex;flex-direction:row;align-items:center;gap:64px;width:1680px">
+          <!-- text -->
+          <div style="flex:1.3;display:flex;flex-direction:column;gap:18px">
+            <div style="display:flex;align-items:center;gap:28px">
+              <img src="assets/mamtak-logo-trans-sm.png" alt="לוגו ממטק - נופר גרגרוד · פיתוח חשיבה" style="width:250px;height:auto;flex:none;filter:drop-shadow(0 16px 28px rgba(43,39,64,.18))">
+              <div>
+                <span class="kicker" style="color:var(--coral-d)">מי אני</span>
+                <h2 style="font-size:62px;line-height:1;margin-top:6px">נופר גרגרוד</h2>
+              </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <span class="tag" style="background:var(--t-indigo);border-color:transparent;color:var(--indigo-d);font-size:22px;padding:8px 18px">מורה</span>
+              <span class="tag" style="background:var(--t-green);border-color:transparent;color:var(--green-d);font-size:22px;padding:8px 18px">מדריכה</span>
+              <span class="tag" style="background:var(--t-orange);border-color:transparent;color:var(--orange-d);font-size:22px;padding:8px 18px">מרצה על מדעי המוח</span>
+              <span class="tag" style="background:var(--t-coral);border-color:transparent;color:var(--coral-d);font-size:22px;padding:8px 18px">מפתחת טכנו-פדגוגית</span>
+            </div>
+            <p style="font-size:33px;font-weight:800;color:var(--indigo);border-right:6px solid var(--coral);padding-right:18px;margin-top:6px">"תמיד הגדרתי את עצמי כמורת <span class="eng">STEM</span>"</p>
+            <p style="font-size:26px;color:var(--ink-soft);font-weight:600;max-width:680px;line-height:1.4">מלווה אנשי חינוך לפיתוח כלי למידה והוראה משמעותית ויצירתית באמצעים טכנולוגיים.</p>
+          </div>
+          <!-- thanks + QR + live link -->
+          <div class="card" style="flex:none;width:474px;align-self:center;display:flex;flex-direction:column;align-items:center;gap:0;padding:0;overflow:hidden">
+            <div style="width:100%;background:linear-gradient(135deg,var(--indigo),var(--coral));color:#fff;text-align:center;padding:24px;font-size:33px;font-weight:800">תודה על ההקשבה</div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:20px;padding:28px 34px 32px">
+              <div class="qrbox" data-qr="https://nofarg8.github.io/Link-in-bio-Nofar/" data-size="340" style="width:340px;height:340px"></div>
+              <a href="https://nofarg8.github.io/Link-in-bio-Nofar/" target="_blank" rel="noopener" class="menti-link" style="display:inline-flex;align-items:center;gap:11px;background:var(--indigo);color:#fff;text-decoration:none;font-size:23px;font-weight:800;padding:14px 24px;border-radius:999px;box-shadow:0 12px 26px -14px rgba(91,83,224,.6);direction:ltr">
+                <svg viewBox="0 0 100 100" style="width:26px;height:26px;flex:none"><use href="#globe"/></svg>
+                <span>nofarg8.github.io/Link-in-bio</span><span style="font-weight:900">↗</span>
+              </a>
+              <div style="font-size:22px;font-weight:600;color:var(--ink-faint);text-align:center">סרקו את הקוד או לחצו על הקישור - נשמח להישאר בקשר</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- טבלת הסדנאות המנחה -->
+      <div class="anim2" style="flex:1;min-height:0;display:flex;align-items:center;justify-content:center;width:100%">
+        <img src="assets/workshops-table.jpg" alt="טבלת סדנאות יישומיות - דרום במרום, AI פוגש STEM: שם הסדנה, שם המנחה, מיקום ושם האולם" style="max-width:100%;max-height:510px;width:auto;height:auto;border-radius:12px;border:2px solid var(--line);box-shadow:0 18px 40px -24px rgba(43,39,64,.4);display:block">
+      </div>
+    </div>
+    <div class="pagenum">24 / 24</div>
+  </section>
+
+</deck-stage>
+
+<script type="application/json" id="speaker-notes">
+[
+  "פתיחה קצרה, מי אני.",
+  "מזמינים את המורים להזין מילה אחת. צפויות: רובוטים, בנייה, מחשבים, מעבדה, הנדסה.",
+  "רוב המילים מדברות על לבנות דברים. נחזיק את התמונה הזו לרגע.",
+  "זה מה שרובנו מדמיינים כששומעים STEM - תלמידים בונים, מרכיבים, מתכנתים. אבל זו רק הקליפה. תכף נראה איך STEM אמיתי נראה אחרת לגמרי - דרך דוגמה מהכיתה. כאן אשבץ תמונה וסרטון משלי (קורס מדעי המוח - הסונטה ה-9 של מוצרט).",
+  "נשים את STEM בצד. יש גישת הוראה שמלווה אותי שנים, ואני רוצה להראות אותה דרך דוגמאות מהכיתה. נחזור ל-STEM בסוף - ותבינו למה.",
+  "לפני הנדבכים - מה הרעיון הגדול. במקום להגיב לקושי אחרי שהוא צץ, אנחנו צופות אותו ומתכננות מראש. התלמיד לא מקבל ידע מוכן, הוא בונה אותו. ששת הנדבכים הבאים הם איך עושים את זה בפועל.",
+  "בחדר הבריחה \"מבנה האטום\" התלמידים מרכיבים אטומים בעצמם ובונים את הידע, צעד אחר צעד, מה שמוריד עומס קוגניטיבי. בסרטון רואים את ניסוי גייגר-מרסדן: גייגר ומרסדן מדדו את סטיית חלקיקי האלפא שנותבו לעלה דק מזהב. על פי המודלים באותה העת, היו חלקיקי האלפא אמורים לסטות בזווית בת מעלות בודדות לכל היותר, אם בכלל. אולם תוצאות הניסוי הראו שחלק קטן מהחלקיקים הוסט בזוויות הגדולות הרבה יותר מ-90 מעלות. רתרפורד הסיק שהמטען החיובי באטום מרוכז ביותר, באופן כזה שהוא יכול להחזיר חלקיקי אלפא העוברים מספיק קרוב אליו. מסקנה זו הובילה לפיתוח המודל הפלנטרי.",
+  "לתיקון מבחן במדעים הצגתי את \"השועל והחסידה\". מתוך הסיפור התלמידים הסיקו בעצמם על ההתאמה בין מבנה לתפקוד. המוח מעבד טוב יותר מה שהוא פותר בעצמו.",
+  "בהעשרה על מערכת החיסון לא פתחתי ברכיבים. הצגתי Case Study - מה היה בעולם לפני שהיו חיסונים - ורק אז נכנסנו לחומר. המוח זוכר דרך משמעות. ג'נר פיתח את החיסון מסרום של בקר לאחר שגילה כי הנערות החולבות שחלו באבעבועות הבקר (מחלה קלה) לא נדבקו באבעבועות שחורות. במסגרת מחקרו ערך ג'נר ניסויים בילדים: באחד מהם החדיר לגופו של ג'יימס פיפס, ילד בריא ועני בן שמונה, נגעים של אבעבועות הבקר, ולאחר מספר שבועות החדיר לגופו נגעים של אבעבועות שחורות.",
+  "בניתי בוט לפונקציה קווית וריבועית שמלווה את התלמידים שלב-שלב, והם עובדים איתו בבית בקצב שלהם. למידה עצמאית ופעילה, עם חזרה מרווחת, מקבעת את הידע.",
+  "התלמידים גילמו בהצגה \"מה עובר על וירוס כשהוא חודר אלינו, ומה קורה לחיידק\". הם הניעו את התהליך בגוף שלהם. עיבוד רב-חושי - תנועה, דיבור וראייה - יוצר יותר עוגני זיכרון.",
+  "בקורס מדעי המוח התלמידים למדו ביולוגיה, כימיה, פיזיקה ומתמטיקה - בתוך נושא אחד. הקשרים בין התחומים מעמיקים את ההבנה ואת הקידוד.",
+  "זו הגישה - בונים ידע, סביב בעיה, מחוברת לעולם, מתוך עשייה.",
+  "נחזור ל-STEM שהשארנו בצד. אלה הנדבכים העיקריים שלו. שימו לב לשפה.",
+  "אם זה כבר נשמע מוכר - זו לא טעות.",
+  "שורה אחר שורה - אותו רעיון. כל דוגמה שראינו בהוראה הפרואקטיבית היא בעצם דוגמה ל-STEM.",
+  "STEM מתאר את ארגון התוכן - רב-תחומי, סביב בעיה. הוראה פרואקטיבית מתארת את העמדה הקוגניטיבית - בונים ידע, מקדימים את הקושי. אותו עיקרון: התלמיד בונה חשיבה מתוך עשייה, סביב בעיה אמיתית.",
+  "שתי הגישות מחליפות מסירת תוכן בבניית חשיבה סביב בעיה אמיתית. זה אותו דבר.",
+  "העולם שהתלמידים נכנסים אליו - AI, בעיות מורכבות, עולם משתנה ללא הרף - מתגמל חשיבה, פתרון בעיות והסתגלות, לא שליפת עובדות. STEM אינו תוספת ללו\"ז, אלא ההכנה הרלוונטית לעולם הזה. ואתן כבר יודעות לעשות את זה.",
+  "מזקקים את כל מה שראינו לארבעה צעדים מעשיים: פותחים מבעיה אמיתית, נותנים לתלמידים לבנות בעצמם, מוסיפים משחק ותנועה, ומחברים בין תחומים וטכנולוגיה. ואתן כבר יודעות לעשות את זה.",
+  "מי אני - נופר גרגרוד: מורה, מדריכה, מרצה על מדעי המוח ומפתחת טכנו-פדגוגית. תמיד הגדרתי את עצמי כמורת STEM. אני מלווה אנשי חינוך לפיתוח כלי למידה והוראה משמעותית ויצירתית באמצעים טכנולוגיים. תודה על ההקשבה - מוזמנים להישאר בקשר, סרקו את הקוד.",
+  "מפנים את המשתתפים לסדנאות היישומיות לפי הטבלה - שם הסדנה, המנחה, המיקום והאולם."
+]
+</script>
+
+<script src="deck-stage.js"></script>
+
+<!-- video lightbox (appended outside the scaled slide so it is fully clickable) -->
+<div id="vlb" role="dialog" aria-modal="true" aria-label="תצוגת סרטון מוגדלת" style="position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;background:rgba(20,17,38,.88);backdrop-filter:blur(6px);padding:3vh 3vw">
+  <button id="vlb-close" aria-label="סגור" style="position:absolute;top:24px;left:28px;width:54px;height:54px;border:0;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;font-size:30px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1">×</button>
+  <video id="vlb-video" controls playsinline style="max-width:94vw;max-height:94vh;width:auto;height:auto;border-radius:16px;box-shadow:0 30px 80px -20px rgba(0,0,0,.7);background:#000"></video>
+</div>
+
+<!-- iframe lightbox for Canva / Google Drive (loaded on demand, removed on close so audio stops) -->
+<div id="ilb" role="dialog" aria-modal="true" aria-label="תצוגת סרטון">
+  <div class="ilb-frame">
+    <button class="lb-close" id="ilb-close" aria-label="סגור">×</button>
+    <div id="ilb-slot"></div>
+  </div>
+</div>
+
+<!-- image lightbox (posters / screenshots) -->
+<div id="imglb" role="dialog" aria-modal="true" aria-label="תצוגת תמונה מוגדלת" style="position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;background:rgba(20,17,38,.9);backdrop-filter:blur(6px);padding:3vh 3vw">
+  <button id="imglb-close" aria-label="סגור" style="position:absolute;top:24px;left:28px;width:54px;height:54px;border:0;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;font-size:30px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;z-index:2">×</button>
+  <img id="imglb-img" alt="" style="max-width:94vw;max-height:94vh;width:auto;height:auto;border-radius:16px;box-shadow:0 30px 80px -20px rgba(0,0,0,.7);background:#fff">
+</div>
+
+<script>
+(function(){
+  /* local-file video lightbox */
+  var lb=document.getElementById('vlb'), v=document.getElementById('vlb-video'), btn=document.getElementById('vlb-close');
+  window.openVideoLightbox=function(src, fromEl){
+    var inline=fromEl&&fromEl.parentElement?fromEl.parentElement.querySelector('video'):null;
+    v.src=src; lb.style.display='flex';
+    if(inline){try{inline.pause();}catch(e){} v.currentTime=inline.currentTime||0;}
+    var p=v.play(); if(p&&p.catch)p.catch(function(){});
+  };
+  function closeV(){ try{v.pause();}catch(e){} lb.style.display='none'; v.removeAttribute('src'); v.load(); }
+  btn.addEventListener('click',closeV);
+  lb.addEventListener('click',function(e){ if(e.target===lb) closeV(); });
+
+  /* iframe (canva/drive) lightbox - inject on open, remove on close to stop playback */
+  var ilb=document.getElementById('ilb'), slot=document.getElementById('ilb-slot'), iclose=document.getElementById('ilb-close');
+  var iframeBox=ilb.querySelector('.ilb-frame');
+  function parseAR(ar){
+    if(!ar) return 16/9;
+    if(typeof ar==='number') return ar;
+    var p=String(ar).split('/'); return p.length===2?(+p[0]/ +p[1]):parseFloat(ar);
+  }
+  function sizeFrame(ar){
+    var maxW=window.innerWidth*0.92, maxH=window.innerHeight*0.90;
+    var w=maxW, h=w/ar;
+    if(h>maxH){ h=maxH; w=h*ar; }
+    iframeBox.style.width=Math.round(w)+'px';
+    iframeBox.style.height=Math.round(h)+'px';
+  }
+  var curAR=16/9;
+  window.openIframeLightbox=function(src, ar){
+    curAR=parseAR(ar);
+    /* show + size the frame BEFORE injecting the iframe, so the embedded
+       player (Drive/Canva) measures a real, full-size container at load */
+    ilb.style.display='flex';
+    sizeFrame(curAR);
+    void iframeBox.offsetHeight; /* force layout */
+    slot.innerHTML='';
+    var f=document.createElement('iframe');
+    f.src=src; f.allow='autoplay; fullscreen; encrypted-media'; f.setAttribute('allowfullscreen','');
+    slot.appendChild(f);
+  };
+  window.addEventListener('resize',function(){ if(ilb.style.display==='flex') sizeFrame(curAR); });
+  function closeI(){ ilb.style.display='none'; slot.innerHTML=''; }
+  iclose.addEventListener('click',closeI);
+  ilb.addEventListener('click',function(e){ if(e.target===ilb) closeI(); });
+
+  /* image lightbox (posters / screenshots) */
+  var imglb=document.getElementById('imglb'), img=document.getElementById('imglb-img'), imgbtn=document.getElementById('imglb-close');
+  window.openImageLightbox=function(src, alt){ img.src=src; img.alt=alt||''; imglb.style.display='flex'; };
+  function closeImg(){ imglb.style.display='none'; img.removeAttribute('src'); }
+  imgbtn.addEventListener('click',closeImg);
+  imglb.addEventListener('click',function(e){ if(e.target===imglb) closeImg(); });
+
+  document.addEventListener('keydown',function(e){
+    if(e.key!=='Escape')return;
+    if(lb.style.display==='flex') closeV();
+    if(ilb.style.display==='flex') closeI();
+    if(imglb.style.display==='flex') closeImg();
+  });
+})();
+</script>
+
+<!-- QR code generation -->
+<script src="assets/qrcode.min.js"></script>
+<script>
+(function(){
+  function draw(){
+    if(!window.QRCode){ setTimeout(draw,200); return; }
+    document.querySelectorAll('.qrbox[data-qr]').forEach(function(box){
+      if(box.dataset.done)return; box.dataset.done='1';
+      var s=parseInt(box.dataset.size||'300',10);
+      new QRCode(box,{text:box.dataset.qr,width:s,height:s,colorDark:'#2B2740',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M});
+    });
+  }
+  if(document.readyState!=='loading') draw(); else document.addEventListener('DOMContentLoaded',draw);
+})();
+</script>
+
+<!-- Re-fit safety net: embedded preview panes can change size WITHOUT firing a
+     window 'resize' event, leaving <deck-stage> on a stale scale (slide overflows
+     / gets cropped). Watch the real layout size and nudge the deck to re-fit. -->
+<script>
+(function(){
+  var last='';
+  function ping(){
+    var de=document.documentElement;
+    var k=de.clientWidth+'x'+de.clientHeight+'@'+window.innerWidth+'x'+window.innerHeight;
+    if(k!==last){ last=k; window.dispatchEvent(new Event('resize')); }
+  }
+  if(window.ResizeObserver){
+    try{ new ResizeObserver(ping).observe(document.documentElement); }catch(e){}
+  }
+  window.addEventListener('load',ping);
+  document.addEventListener('visibilitychange',function(){ if(!document.hidden) ping(); });
+  [120,400,1000,2500].forEach(function(t){ setTimeout(ping,t); });
+})();
+</script>
+</body>
+</html>

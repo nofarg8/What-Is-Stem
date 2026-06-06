@@ -422,15 +422,15 @@
         </div>
       </div>
       <h2 class="anim2" style="font-size:40px;line-height:1.1;margin-top:14px">כיתה הפוכה ושחזור ניסוי <span style="color:var(--coral-d)">- עם פיגומים.</span></h2>
-      <div class="anim2" style="flex:1;display:flex;gap:40px;align-items:stretch;min-height:0;margin-top:16px">
+      <div class="anim2" style="display:flex;justify-content:center;gap:44px;align-items:flex-start;margin-top:22px">
         <!-- דוגמה 1: כיתה הפוכה -->
-        <div style="flex:1;display:flex;flex-direction:column;gap:14px;min-height:0">
+        <div style="display:flex;flex-direction:column;gap:13px;width:586px">
           <div style="display:flex;align-items:center;gap:12px">
             <span style="font-size:26px;font-weight:800;color:var(--coral-d)">דוגמה · כיתה הפוכה</span>
             <span style="height:3px;flex:1;background:var(--line);border-radius:9px"></span>
           </div>
           <p style="font-size:21px;line-height:1.35;color:var(--ink-soft);font-weight:600;background:var(--t-coral);border-radius:14px;padding:13px 18px">בוט לפונקציה קווית וריבועית מלווה את התלמידים שלב-שלב. הם עובדים איתו בבית, בקצב שלהם.</p>
-          <div class="media r169" style="flex:1;min-height:0;cursor:pointer" onclick="openVideoLightbox('assets/math-bot.mp4')">
+          <div class="media" style="position:relative;width:586px;height:330px;cursor:pointer" onclick="openVideoLightbox('assets/math-bot.mp4')">
             <div class="video-poster coral">
               <div class="play-circle"><svg viewBox="0 0 24 24" width="34" height="34"><path d="M8 5v14l11-7z" fill="#fff"/></svg></div>
               <div class="poster-label">הבוט המתמטי בפעולה<br><span style="font-weight:600;opacity:.92">פונקציה קווית וריבועית</span></div>
@@ -440,20 +440,28 @@
           <div class="vcap">הבוט המתמטי בפעולה - למידה עצמאית בבית</div>
         </div>
         <!-- דוגמה 2: שחזור ניסוי -->
-        <div style="flex:1;display:flex;flex-direction:column;gap:14px;min-height:0">
+        <div style="display:flex;flex-direction:column;gap:13px">
           <div style="display:flex;align-items:center;gap:12px">
             <span style="font-size:26px;font-weight:800;color:var(--indigo)">דוגמה · שחזור ניסוי</span>
             <span style="height:3px;flex:1;background:linear-gradient(90deg,var(--indigo),var(--coral));border-radius:9px"></span>
           </div>
-          <p style="font-size:21px;line-height:1.35;color:var(--ink-soft);font-weight:600;background:var(--t-indigo);border-radius:14px;padding:13px 18px">בקורס מדעי המוח התלמידים משחזרים ניסוי בעצמם - חוקרים, מתעדים ומסיקים מסקנות.</p>
-          <div class="media r169" style="flex:1;min-height:0;cursor:pointer" onclick="openVideoLightbox('assets/neuroscience-mozart.mp4')">
-            <div class="video-poster">
-              <div class="play-circle"><svg viewBox="0 0 24 24" width="34" height="34"><path d="M8 5v14l11-7z" fill="#fff"/></svg></div>
-              <div class="poster-label">שחזור ניסוי · מדעי המוח<br><span style="font-weight:600;opacity:.92">הסונטה ה-9 של מוצרט</span></div>
-              <div class="poster-hint">לחצו לצפייה</div>
+          <p style="font-size:21px;line-height:1.35;color:var(--ink-soft);font-weight:600;background:var(--t-indigo);border-radius:14px;padding:13px 18px">בקורס מדעי המוח התלמידים משחזרים בעצמם את ניסוי "אפקט מוצרט" - סונטה מס' 9 והשפעתה על ביצועים במתמטיקה.</p>
+          <div style="display:flex;gap:16px;align-items:flex-start">
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div class="media" style="position:relative;width:586px;height:330px;cursor:pointer" onclick="openVideoLightbox('assets/neuroscience-mozart.mp4')">
+                <div class="video-poster">
+                  <div class="play-circle"><svg viewBox="0 0 24 24" width="34" height="34"><path d="M8 5v14l11-7z" fill="#fff"/></svg></div>
+                  <div class="poster-label">שחזור ניסוי · מדעי המוח<br><span style="font-weight:600;opacity:.92">הסונטה ה-9 של מוצרט</span></div>
+                  <div class="poster-hint">לחצו לצפייה</div>
+                </div>
+              </div>
+              <div class="vcap" style="font-size:21px">הסרטון מהכיתה</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px;align-items:center">
+              <img src="assets/mozart-experiment.jpg" alt="שחזור ניסוי אפקט מוצרט - הסונטה ה-9 והשפעתה על ביצועים במתמטיקה" onclick="openImageLightbox('assets/mozart-experiment.jpg','שחזור ניסוי אפקט מוצרט - מדעי המוח')" style="height:330px;width:auto;display:block;border-radius:16px;border:2px solid var(--line);box-shadow:0 18px 40px -24px rgba(43,39,64,.5);cursor:pointer">
+              <div class="vcap" style="font-size:21px">הניסוי · לחצו להגדלה</div>
             </div>
           </div>
-          <div class="vcap">שחזור ניסוי - קורס מדעי המוח</div>
         </div>
       </div>
     </div>
@@ -947,7 +955,7 @@
           <div style="font-size:22px;font-weight:600;color:var(--ink-faint);text-align:center">סרקו את הקוד או לחצו על הקישור - נשמח להישאר בקשר</div>
           <div style="width:100%;border-top:1px dashed var(--line);padding-top:18px;display:flex;flex-direction:column;align-items:center;gap:11px">
             <div style="font-size:20px;font-weight:700;color:var(--ink-faint)">לא הצלחתם לסרוק?</div>
-            <div style="font-size:28px;font-weight:800;color:var(--indigo);text-align:center;line-height:1.18">רושמים בגוגל: <span style="color:var(--coral-d)">נופר גרגרוד</span></div>
+            <div style="font-size:28px;font-weight:800;color:var(--indigo);text-align:center;line-height:1.18">מחפשים בגוגל: <span style="color:var(--coral-d)">נופר גרגרוד</span></div>
             <a href="tel:0506934423" class="menti-link" style="display:inline-flex;align-items:center;gap:10px;background:var(--coral);color:#fff;text-decoration:none;font-size:26px;font-weight:800;padding:11px 26px;border-radius:999px;box-shadow:0 12px 26px -14px rgba(255,107,107,.6);direction:ltr">
               <svg viewBox="0 0 24 24" width="23" height="23" style="flex:none" fill="#fff"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.8 21 3 13.2 3 3.5c0-.6.4-1 1-1H7.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1l-2.1 2.1z"/></svg>
               <span>050-6934423</span>

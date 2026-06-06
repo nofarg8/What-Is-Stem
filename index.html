@@ -217,31 +217,13 @@
         <span class="kicker" style="color:var(--indigo)">מה חושבים על <span class="eng">STEM</span></span>
         <h2 style="font-size:62px;margin-top:8px"><span class="eng" style="background:var(--t-indigo);color:var(--indigo-d);padding:2px 18px;border-radius:14px">STEM</span> זה רק לבנות דברים?</h2>
       </div>
-      <div style="flex:1;display:flex;gap:38px;align-items:stretch">
-        <!-- מה חושבים -->
-        <div class="anim2" style="flex:1;display:flex;flex-direction:column;gap:16px">
-          <div style="display:flex;align-items:center;gap:12px">
-            <span style="font-size:28px;font-weight:800;color:var(--ink-soft)">מה חושבים</span>
-            <span style="height:3px;flex:1;background:var(--line);border-radius:9px"></span>
-          </div>
-          <div class="media" style="flex:1;background:#fff"><img src="assets/stereotype-stem.jpg" alt="STEM זה לבנות טחנת רוח" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-          <div class="vcap">"<span class="eng">STEM</span> זה רק לבנות" - הסטריאוטיפ</div>
+      <div class="anim2" style="flex:1;display:flex;flex-direction:column;gap:18px;align-items:center;justify-content:center;min-height:0">
+        <div style="display:flex;align-items:center;gap:14px;width:100%;max-width:1200px">
+          <span style="font-size:28px;font-weight:800;color:var(--ink-soft)">מה חושבים</span>
+          <span style="height:3px;flex:1;background:var(--line);border-radius:9px"></span>
         </div>
-        <!-- איך באמת -->
-        <div class="anim3" style="flex:1;display:flex;flex-direction:column;gap:16px">
-          <div style="display:flex;align-items:center;gap:12px">
-            <span style="font-size:28px;font-weight:800;color:var(--coral-d)">איך באמת</span>
-            <span style="height:3px;flex:1;background:linear-gradient(90deg,var(--coral),var(--indigo));border-radius:9px"></span>
-          </div>
-          <div class="media r169" style="flex:1;min-height:0;cursor:pointer" onclick="openVideoLightbox('assets/neuroscience-mozart.mp4')">
-            <div class="video-poster">
-              <div class="play-circle"><svg viewBox="0 0 24 24" width="34" height="34"><path d="M8 5v14l11-7z" fill="#fff"/></svg></div>
-              <div class="poster-label">קורס מדעי המוח<br><span style="font-weight:600;opacity:.92">חוקרים את הסונטה ה-9 של מוצרט</span></div>
-              <div class="poster-hint">לחצו לצפייה</div>
-            </div>
-          </div>
-          <div class="vcap">קורס מדעי המוח - הסונטה ה-9 של מוצרט</div>
-        </div>
+        <div class="media" style="flex:1;min-height:0;width:100%;max-width:1200px;background:#fff"><img src="assets/stereotype-stem.jpg" alt="STEM זה לבנות טחנת רוח" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <div class="vcap" style="width:100%;max-width:1200px">"<span class="eng">STEM</span> זה רק לבנות" - הסטריאוטיפ</div>
       </div>
     </div>
     <div class="foot"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
@@ -431,33 +413,48 @@
         <use href="#atom" x="1660" y="775" width="185" height="185"/>
       </svg>
     </div>
-    <div class="pad content" style="flex-direction:row;align-items:center;gap:56px">
-      <div style="flex:1.04;display:flex;flex-direction:column;gap:24px">
-        <div class="anim" style="display:flex;align-items:center;gap:20px">
-          <span class="numbadge" style="background:var(--coral)">04</span>
-          <div>
-            <div class="kicker" style="color:var(--coral-d);font-size:22px">הוראה פרואקטיבית · נדבך 4 מתוך 6</div>
-            <div style="font-size:38px;font-weight:800;color:var(--ink);margin-top:4px">פיתוח הלומד העצמאי</div>
-          </div>
+    <div class="pad content" style="padding:54px 80px 64px">
+      <div class="anim" style="display:flex;align-items:center;gap:20px">
+        <span class="numbadge" style="background:var(--coral)">04</span>
+        <div>
+          <div class="kicker" style="color:var(--coral-d);font-size:22px">הוראה פרואקטיבית · נדבך 4 מתוך 6</div>
+          <div style="font-size:38px;font-weight:800;color:var(--ink);margin-top:4px">פיתוח הלומד העצמאי</div>
         </div>
-        <h2 class="anim2" style="font-size:46px;line-height:1.12">כיתה הפוכה ומשימות חקר <span style="color:var(--coral-d)">עם פיגומים.</span></h2>
-        <p class="anim2" style="font-size:24px;line-height:1.4;color:var(--ink-soft);font-weight:600;background:var(--t-coral);border-radius:16px;padding:16px 20px;max-width:760px">בניתי בוט לפונקציה קווית וריבועית שמלווה את התלמידים שלב-שלב. הם עובדים איתו בבית, בקצב שלהם - למידה עצמאית ופעילה.</p>
-        <!-- video of the bot in action -->
-        <div class="anim3" style="display:flex;flex-direction:column;gap:10px;margin-top:2px;width:560px;max-width:100%">
-          <div class="media r169" style="cursor:pointer" onclick="openVideoLightbox('assets/math-bot.mp4')">
+      </div>
+      <h2 class="anim2" style="font-size:40px;line-height:1.1;margin-top:14px">כיתה הפוכה ושחזור ניסוי <span style="color:var(--coral-d)">- עם פיגומים.</span></h2>
+      <div class="anim2" style="flex:1;display:flex;gap:40px;align-items:stretch;min-height:0;margin-top:16px">
+        <!-- דוגמה 1: כיתה הפוכה -->
+        <div style="flex:1;display:flex;flex-direction:column;gap:14px;min-height:0">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="font-size:26px;font-weight:800;color:var(--coral-d)">דוגמה · כיתה הפוכה</span>
+            <span style="height:3px;flex:1;background:var(--line);border-radius:9px"></span>
+          </div>
+          <p style="font-size:21px;line-height:1.35;color:var(--ink-soft);font-weight:600;background:var(--t-coral);border-radius:14px;padding:13px 18px">בוט לפונקציה קווית וריבועית מלווה את התלמידים שלב-שלב. הם עובדים איתו בבית, בקצב שלהם.</p>
+          <div class="media r169" style="flex:1;min-height:0;cursor:pointer" onclick="openVideoLightbox('assets/math-bot.mp4')">
             <div class="video-poster coral">
               <div class="play-circle"><svg viewBox="0 0 24 24" width="34" height="34"><path d="M8 5v14l11-7z" fill="#fff"/></svg></div>
               <div class="poster-label">הבוט המתמטי בפעולה<br><span style="font-weight:600;opacity:.92">פונקציה קווית וריבועית</span></div>
               <div class="poster-hint">לחצו לצפייה</div>
             </div>
           </div>
-          <div class="vcap" style="text-align:right">הבוט המתמטי בפעולה - פונקציה קווית וריבועית</div>
+          <div class="vcap">הבוט המתמטי בפעולה - למידה עצמאית בבית</div>
         </div>
-      </div>
-      <!-- big, clean bot-chat screenshot -->
-      <div class="anim2" style="flex:none;align-self:center;display:flex;flex-direction:column;align-items:center;gap:12px">
-        <img src="assets/bot-chat.png" alt="התכתבות עם הבוט המתמטי - תחום עלייה וירידה" style="width:472px;height:auto;max-height:800px;border-radius:22px;box-shadow:0 26px 56px -24px rgba(43,39,64,.5);background:#fff;display:block">
-        <div class="vcap" style="font-size:23px">התכתבות אמיתית מהכיתה</div>
+        <!-- דוגמה 2: שחזור ניסוי -->
+        <div style="flex:1;display:flex;flex-direction:column;gap:14px;min-height:0">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="font-size:26px;font-weight:800;color:var(--indigo)">דוגמה · שחזור ניסוי</span>
+            <span style="height:3px;flex:1;background:linear-gradient(90deg,var(--indigo),var(--coral));border-radius:9px"></span>
+          </div>
+          <p style="font-size:21px;line-height:1.35;color:var(--ink-soft);font-weight:600;background:var(--t-indigo);border-radius:14px;padding:13px 18px">בקורס מדעי המוח התלמידים משחזרים ניסוי בעצמם - חוקרים, מתעדים ומסיקים מסקנות.</p>
+          <div class="media r169" style="flex:1;min-height:0;cursor:pointer" onclick="openVideoLightbox('assets/neuroscience-mozart.mp4')">
+            <div class="video-poster">
+              <div class="play-circle"><svg viewBox="0 0 24 24" width="34" height="34"><path d="M8 5v14l11-7z" fill="#fff"/></svg></div>
+              <div class="poster-label">שחזור ניסוי · מדעי המוח<br><span style="font-weight:600;opacity:.92">הסונטה ה-9 של מוצרט</span></div>
+              <div class="poster-hint">לחצו לצפייה</div>
+            </div>
+          </div>
+          <div class="vcap">שחזור ניסוי - קורס מדעי המוח</div>
+        </div>
       </div>
     </div>
     <div class="foot"><svg class="mk"><use href="#mk"/></svg><span class="lbl">ממטק · נופר גרגרוד</span></div>
@@ -948,6 +945,14 @@
             <span style="font-weight:900">↗</span>
           </a>
           <div style="font-size:22px;font-weight:600;color:var(--ink-faint);text-align:center">סרקו את הקוד או לחצו על הקישור - נשמח להישאר בקשר</div>
+          <div style="width:100%;border-top:1px dashed var(--line);padding-top:18px;display:flex;flex-direction:column;align-items:center;gap:11px">
+            <div style="font-size:20px;font-weight:700;color:var(--ink-faint)">לא הצלחתם לסרוק?</div>
+            <div style="font-size:28px;font-weight:800;color:var(--indigo);text-align:center;line-height:1.18">רושמים בגוגל: <span style="color:var(--coral-d)">נופר גרגרוד</span></div>
+            <a href="tel:0506934423" class="menti-link" style="display:inline-flex;align-items:center;gap:10px;background:var(--coral);color:#fff;text-decoration:none;font-size:26px;font-weight:800;padding:11px 26px;border-radius:999px;box-shadow:0 12px 26px -14px rgba(255,107,107,.6);direction:ltr">
+              <svg viewBox="0 0 24 24" width="23" height="23" style="flex:none" fill="#fff"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.8 21 3 13.2 3 3.5c0-.6.4-1 1-1H7.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1l-2.1 2.1z"/></svg>
+              <span>050-6934423</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -1015,13 +1020,13 @@
   "פתיחה קצרה, מי אני.",
   "מזמינים את המורים להזין מילה אחת. צפויות: רובוטים, בנייה, מחשבים, מעבדה, הנדסה.",
   "רוב המילים מדברות על לבנות דברים. נחזיק את התמונה הזו לרגע.",
-  "זה מה שרובנו מדמיינים כששומעים STEM - תלמידים בונים, מרכיבים, מתכנתים. אבל זו רק הקליפה. תכף נראה איך STEM אמיתי נראה אחרת לגמרי - דרך דוגמה מהכיתה. כאן אשבץ תמונה וסרטון משלי (קורס מדעי המוח - הסונטה ה-9 של מוצרט).",
+  "זה מה שרובנו מדמיינים כששומעים STEM - תלמידים בונים, מרכיבים, מתכנתים. אבל זו רק הקליפה. תכף נראה איך STEM אמיתי נראה אחרת לגמרי - דרך דוגמאות מהכיתה.",
   "נשים את STEM בצד. יש גישת הוראה שמלווה אותי שנים, ואני רוצה להראות אותה דרך דוגמאות מהכיתה. נחזור ל-STEM בסוף - ותבינו למה.",
   "לפני הנדבכים - מה הרעיון הגדול. במקום להגיב לקושי אחרי שהוא צץ, אנחנו צופות אותו ומתכננות מראש. התלמיד לא מקבל ידע מוכן, הוא בונה אותו. ששת הנדבכים הבאים הם איך עושים את זה בפועל.",
   "בחדר הבריחה \"מבנה האטום\" התלמידים מרכיבים אטומים בעצמם ובונים את הידע, צעד אחר צעד, מה שמוריד עומס קוגניטיבי. בסרטון רואים את ניסוי גייגר-מרסדן: גייגר ומרסדן מדדו את סטיית חלקיקי האלפא שנותבו לעלה דק מזהב. על פי המודלים באותה העת, היו חלקיקי האלפא אמורים לסטות בזווית בת מעלות בודדות לכל היותר, אם בכלל. אולם תוצאות הניסוי הראו שחלק קטן מהחלקיקים הוסט בזוויות הגדולות הרבה יותר מ-90 מעלות. רתרפורד הסיק שהמטען החיובי באטום מרוכז ביותר, באופן כזה שהוא יכול להחזיר חלקיקי אלפא העוברים מספיק קרוב אליו. מסקנה זו הובילה לפיתוח המודל הפלנטרי.",
   "לתיקון מבחן במדעים הצגתי את \"השועל והחסידה\". מתוך הסיפור התלמידים הסיקו בעצמם על ההתאמה בין מבנה לתפקוד. המוח מעבד טוב יותר מה שהוא פותר בעצמו.",
   "בהעשרה על מערכת החיסון לא פתחתי ברכיבים. הצגתי Case Study - מה היה בעולם לפני שהיו חיסונים - ורק אז נכנסנו לחומר. המוח זוכר דרך משמעות. ג'נר פיתח את החיסון מסרום של בקר לאחר שגילה כי הנערות החולבות שחלו באבעבועות הבקר (מחלה קלה) לא נדבקו באבעבועות שחורות. במסגרת מחקרו ערך ג'נר ניסויים בילדים: באחד מהם החדיר לגופו של ג'יימס פיפס, ילד בריא ועני בן שמונה, נגעים של אבעבועות הבקר, ולאחר מספר שבועות החדיר לגופו נגעים של אבעבועות שחורות.",
-  "בניתי בוט לפונקציה קווית וריבועית שמלווה את התלמידים שלב-שלב, והם עובדים איתו בבית בקצב שלהם. למידה עצמאית ופעילה, עם חזרה מרווחת, מקבעת את הידע.",
+  "בניתי בוט לפונקציה קווית וריבועית שמלווה את התלמידים שלב-שלב, והם עובדים איתו בבית בקצב שלהם - כיתה הפוכה. דוגמה נוספת: בקורס מדעי המוח התלמידים משחזרים ניסוי בעצמם. שתיהן למידה עצמאית ופעילה שמקבעת את הידע.",
   "התלמידים גילמו בהצגה \"מה עובר על וירוס כשהוא חודר אלינו, ומה קורה לחיידק\". הם הניעו את התהליך בגוף שלהם. עיבוד רב-חושי - תנועה, דיבור וראייה - יוצר יותר עוגני זיכרון.",
   "בקורס מדעי המוח התלמידים למדו ביולוגיה, כימיה, פיזיקה ומתמטיקה - בתוך נושא אחד. הקשרים בין התחומים מעמיקים את ההבנה ואת הקידוד.",
   "זו הגישה - בונים ידע, סביב בעיה, מחוברת לעולם, מתוך עשייה.",
